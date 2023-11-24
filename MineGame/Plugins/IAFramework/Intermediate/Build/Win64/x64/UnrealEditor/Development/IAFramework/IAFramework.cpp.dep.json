@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gitproject\\ueframework\\mine\\minegame\\plugins\\iaframework\\source\\iaframework\\private\\iaframework.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gitproject\\ueframework\\mine\\minegame\\intermediate\\build\\win64\\x64\\minegameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "d:\\gitproject\\ueframework\\mine\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iaframework\\definitions.iaframework.h",
+            "d:\\gitproject\\ueframework\\mine\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\iaframework.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

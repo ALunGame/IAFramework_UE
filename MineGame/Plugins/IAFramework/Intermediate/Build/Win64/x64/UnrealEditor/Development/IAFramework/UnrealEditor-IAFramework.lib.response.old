@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-IAFramework.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\GitProject\UEFramework\Mine\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.obj"
+"D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAFramework.cpp.obj"
+"D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Default.rc2.res"
+/OUT:"D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\UnrealEditor-IAFramework.lib"
