@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeIAActorComponent() {}
 		{ "ModuleRelativePath", "Public/Object/Actor/IAActorComponent.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAActorComponent, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType_MetaData)) }; // 1814171180
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAActorComponent, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ModuleType_MetaData)) }; // 769984659
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAActorComponent_Statics::NewProp_ObjectName_MetaData[] = {
 		{ "Category", "IA" },
@@ -128,15 +128,15 @@ void EmptyLinkFunctionForGeneratedCodeIAActorComponent() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UIAActorComponent);
 	UIAActorComponent::~UIAActorComponent() {}
-	struct Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAActorComponent, UIAActorComponent::StaticClass, TEXT("UIAActorComponent"), &Z_Registration_Info_UClass_UIAActorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAActorComponent), 3122310505U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UIAActorComponent, UIAActorComponent::StaticClass, TEXT("UIAActorComponent"), &Z_Registration_Info_UClass_UIAActorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAActorComponent), 580344978U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_2287299325(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_1168517801(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IAActorComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

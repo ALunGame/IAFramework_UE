@@ -6,6 +6,7 @@
 #include "Module/IAModule.h"
 #include "Common/IACommon.h"
 #include "Game/IAGameTypes.h"
+#include "Module/IATimerModule.h"
 #include "UObject/Interface.h"
 #include "IAOO.generated.h"
 
@@ -103,7 +104,7 @@ protected:
 	FName IClassName;
 
 	//对应模组的序号
-	EGameModule ModuleType;
+	EGameModule Module;
 
 protected:
 	
@@ -146,6 +147,16 @@ protected:
 	void BuildMultiClassWealth(EWealthType WealthType, FName WealthName, int32 Amount, FName FunName);
 	void BuildMultiClassWealth(EWealthType WealthType, FName WealthName, int32 Amount, FName FunName, FTransform SpawnTransform);
 	void BuildMultiClassWealth(EWealthType WealthType, FName WealthName, int32 Amount, FName FunName, TArray<FTransform> SpawnTransforms);
+
+	//设置计时器
+	template<class UserClass>
+	void SetTimer(FName TimerName, UserClass* UserObj, typename IATimerEvent::TUObjectMethodDelegate<UserClass>::FMethodPtr InMethod, float InRateTime, int InTotalRunTimes = -1, float InFirstDelayTime = -1.f);
+
+	//暂停计时器
+	void StopTimer(FName TimerName);
+
+	//清空所有计时器
+	void StopTimers();
 };
 
 template <typename RetType, typename ... VarTypes>
@@ -157,8 +168,25 @@ IACallHandle<RetType, VarTypes...> IIAOO::RegisterCallPort(FName CallName)
 template <typename RetType, typename ... VarTypes>
 IAFunHandle IIAOO::RegisterFunPort(EGameModule ModuleType, FName CallName, TFunction<RetType(VarTypes...)> InsFun)
 {
-	if (this->ModuleType == ModuleType)
+	if (this->Module == ModuleType)
 		return IModule->RegisterFunPort<RetType, VarTypes...>(CallName, InsFun);
 	else
 		return IDriver->RegisterFunPort<RetType, VarTypes...>(ModuleType, CallName, InsFun);
+}
+
+template <class UserClass>
+void IIAOO::SetTimer(FName TimerName, UserClass* UserObj, typename IATimerEvent::TUObjectMethodDelegate<UserClass>::FMethodPtr InMethod,
+	float InRateTime, int InTotalRunTimes, float InFirstDelayTime)
+{
+	UIACommon::Get()->GetTimerModule()->SetTimer(TimerName,UserObj,InMethod,InRateTime,InTotalRunTimes,InFirstDelayTime);
+}
+
+inline void IIAOO::StopTimer(FName TimerName)
+{
+	UIACommon::Get()->GetTimerModule()->StopTimer(this,TimerName);
+}
+
+inline void IIAOO::StopTimers()
+{
+	UIACommon::Get()->GetTimerModule()->StopTimers(this);
 }

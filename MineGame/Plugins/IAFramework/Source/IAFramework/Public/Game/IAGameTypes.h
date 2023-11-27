@@ -20,7 +20,8 @@ enum class EGameModule : uint8
 {
 	Null		UMETA(DisplayName = "空"),		
 	Center		UMETA(DisplayName = "中央模组"),				//中央模组
-	HUD			UMETA(DisplayName = "UI模组"),				//UI模组, 约定放在第二位, UI框架会直接使用序号1去获取HUD模组, 如果不使用UI框架, 不需要强制在第二位
+	HUD			UMETA(DisplayName = "UI模组"),				//UI模组
+	Timer		UMETA(DisplayName = "计时器模组"),			//计时器模组
 	Player		UMETA(DisplayName = "玩家模组"),				//玩家模组
 };
 

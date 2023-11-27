@@ -36,8 +36,8 @@ protected:
 	//保存驱动器
 	AIADriver* IDriver;
 
-	//对应模组的序号
-	EGameModule ModuleType;
+	//对应模组
+	EGameModule Module;
 
 
 protected:

@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeIACameraActor() {}
 		{ "ModuleRelativePath", "Public/Object/Actor/IACameraActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AIACameraActor, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType_MetaData)) }; // 1814171180
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AIACameraActor, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIACameraActor_Statics::NewProp_ModuleType_MetaData)) }; // 769984659
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIACameraActor_Statics::NewProp_ObjectName_MetaData[] = {
 		{ "Category", "IA" },
@@ -128,15 +128,15 @@ void EmptyLinkFunctionForGeneratedCodeIACameraActor() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AIACameraActor);
 	AIACameraActor::~AIACameraActor() {}
-	struct Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIACameraActor, AIACameraActor::StaticClass, TEXT("AIACameraActor"), &Z_Registration_Info_UClass_AIACameraActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIACameraActor), 711351807U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AIACameraActor, AIACameraActor::StaticClass, TEXT("AIACameraActor"), &Z_Registration_Info_UClass_AIACameraActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIACameraActor), 836029885U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_1869617376(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_1380466308(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Actor_IACameraActor_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

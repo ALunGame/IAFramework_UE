@@ -71,5 +71,5 @@
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_IDENTIFIER=MineGame
-/fo "D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Default.rc2.res"
+/fo "D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

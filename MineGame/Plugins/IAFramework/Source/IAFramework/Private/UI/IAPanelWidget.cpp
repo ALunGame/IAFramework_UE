@@ -72,7 +72,7 @@ void UIAPanelWidget::RemoveCallBack()
 	{
 		RemoveFromParent();
 		//告诉UI管理器处理父控件
-		//ExitCallBack(UIFrameModuleType, UIFrameName, ExitCallBackName, UINature.LayoutType, WorkLayout);
+		ExitCallBack(UIFrameModuleType, UIFrameName, ExitCallBackName, UINature.LayoutType, WorkLayout);
 	}
 	//执行销毁
 	IADestroy();
@@ -95,20 +95,20 @@ void UIAPanelWidget::ExitSelfPanel()
 
 void UIAPanelWidget::AdvanceLoadPanel(FName PanelName)
 {
-	//OperatorUIPanel(UIFrameModuleType, UIFrameName, AdvanceLoadPanelName, PanelName);
+	OperatorUIPanel(UIFrameModuleType, UIFrameName, AdvanceLoadPanelName, PanelName);
 }
 
 void UIAPanelWidget::ShowUIPanel(FName PanelName)
 {
-	//OperatorUIPanel(UIFrameModuleType, UIFrameName, ShowUIPanelName, PanelName);
+	OperatorUIPanel(UIFrameModuleType, UIFrameName, ShowUIPanelName, PanelName);
 }
 
 void UIAPanelWidget::HideUIPanel(FName PanelName)
 {
-	//OperatorUIPanel(UIFrameModuleType, UIFrameName, HideUIPanelName, PanelName);
+	OperatorUIPanel(UIFrameModuleType, UIFrameName, HideUIPanelName, PanelName);
 }
 
 void UIAPanelWidget::ExitUIPanel(FName PanelName)
 {
-	//OperatorUIPanel(UIFrameModuleType, UIFrameName, ExitUIPanelName, PanelName);
+	OperatorUIPanel(UIFrameModuleType, UIFrameName, ExitUIPanelName, PanelName);
 }

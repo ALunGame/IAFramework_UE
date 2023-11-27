@@ -93,7 +93,7 @@ protected:
 	FLinearColor ImPenetrableLucency;
 
 	//保存循环检测加载完毕则显示方法的延时循环计时器
-	FTimerHandle WaitShowHandle;
+	//FTimerHandle WaitShowHandle;
 
 protected:
 

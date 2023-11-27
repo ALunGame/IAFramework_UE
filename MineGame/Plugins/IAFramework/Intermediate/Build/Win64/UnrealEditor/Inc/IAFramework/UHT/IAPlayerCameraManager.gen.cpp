@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPlayerCameraManager() {}
 		{ "ModuleRelativePath", "Public/Object/Player/IAPlayerCameraManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AIAPlayerCameraManager, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType_MetaData)) }; // 1814171180
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AIAPlayerCameraManager, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ModuleType_MetaData)) }; // 769984659
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIAPlayerCameraManager_Statics::NewProp_ObjectName_MetaData[] = {
 		{ "Category", "IA" },
@@ -127,15 +127,15 @@ void EmptyLinkFunctionForGeneratedCodeIAPlayerCameraManager() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AIAPlayerCameraManager);
 	AIAPlayerCameraManager::~AIAPlayerCameraManager() {}
-	struct Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIAPlayerCameraManager, AIAPlayerCameraManager::StaticClass, TEXT("AIAPlayerCameraManager"), &Z_Registration_Info_UClass_AIAPlayerCameraManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIAPlayerCameraManager), 4163344328U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AIAPlayerCameraManager, AIAPlayerCameraManager::StaticClass, TEXT("AIAPlayerCameraManager"), &Z_Registration_Info_UClass_AIAPlayerCameraManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIAPlayerCameraManager), 2315783613U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_1534450246(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_3910071742(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_Player_IAPlayerCameraManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

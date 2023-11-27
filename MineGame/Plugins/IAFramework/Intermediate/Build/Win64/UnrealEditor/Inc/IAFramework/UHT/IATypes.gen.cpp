@@ -1153,7 +1153,7 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FWealthURL>()
 		{ "ToolTip", "\xe6\xa8\xa1\xe7\xbb\x84\xe5\x90\x8d\xe5\xad\x97, \xe8\xbf\x99\xe4\xb8\xaa""DataAsset\xe4\xb8\x8b\xe7\x9a\x84\xe8\xb5\x84\xe6\xba\x90\xe7\x94\x9f\xe6\x88\x90\xe7\x9a\x84\xe5\xaf\xb9\xe8\xb1\xa1\xe9\xbb\x98\xe8\xae\xa4\xe6\xb3\xa8\xe5\x86\x8c\xe5\x88\xb0ModuleName\xe5\xaf\xb9\xe5\xba\x94\xe7\x9a\x84\xe6\xa8\xa1\xe7\xbb\x84\n\xe5\xa6\x82\xe6\x9e\x9c\xe4\xb8\xba\xe7\xa9\xba\xe5\x88\x99\xe8\xaf\xb4\xe6\x98\x8e\xe8\xaf\xa5""Asset\xe4\xbd\xbf\xe7\x94\xa8\xe4\xba\x8e\xe5\xa4\x9a\xe4\xb8\xaa\xe6\xa8\xa1\xe7\xbb\x84\xe4\xb8\x8b, \xe8\x87\xaa\xe5\x8a\xa8\xe7\x94\x9f\xe6\x88\x90\xe7\x9a\x84\xe5\xaf\xb9\xe8\xb1\xa1\xe6\xb3\xa8\xe5\x86\x8c\xe5\x88\xb0\xe8\xaf\xa5""Asset\xe6\x94\xbe\xe7\xbd\xae\xe7\x9a\x84\xe6\xa8\xa1\xe7\xbb\x84\xe4\xb8\x8b" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UWealthData, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType_MetaData)) }; // 1814171180
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType = { "ModuleType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UWealthData, ModuleType), Z_Construct_UEnum_IAFramework_EGameModule, METADATA_PARAMS(Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWealthData_Statics::NewProp_ModuleType_MetaData)) }; // 769984659
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWealthData_Statics::NewProp_AutoObjectData_Inner = { "AutoObjectData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FWealthObject, METADATA_PARAMS(nullptr, 0) }; // 131552998
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWealthData_Statics::NewProp_AutoObjectData_MetaData[] = {
@@ -1683,13 +1683,13 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUINature>()
 		}
 		return Z_Registration_Info_UScriptStruct_UINature.InnerSingleton;
 	}
-	struct Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo[] = {
 		{ EBaseObjectLife_StaticEnum, TEXT("EBaseObjectLife"), &Z_Registration_Info_UEnum_EBaseObjectLife, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2537721823U) },
 		{ EBaseObjectState_StaticEnum, TEXT("EBaseObjectState"), &Z_Registration_Info_UEnum_EBaseObjectState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1231647334U) },
 		{ EAgreementType_StaticEnum, TEXT("EAgreementType"), &Z_Registration_Info_UEnum_EAgreementType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3778841268U) },
@@ -1700,7 +1700,7 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUINature>()
 		{ EPanelShowType_StaticEnum, TEXT("EPanelShowType"), &Z_Registration_Info_UEnum_EPanelShowType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1466793649U) },
 		{ EPanelLucenyType_StaticEnum, TEXT("EPanelLucenyType"), &Z_Registration_Info_UEnum_EPanelLucenyType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 305126666U) },
 	};
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo[] = {
+	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo[] = {
 		{ FWealthItem::StaticStruct, Z_Construct_UScriptStruct_FWealthItem_Statics::NewStructOps, TEXT("WealthItem"), &Z_Registration_Info_UScriptStruct_WealthItem, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWealthItem), 3382983061U) },
 		{ FWealthObject::StaticStruct, Z_Construct_UScriptStruct_FWealthObject_Statics::NewStructOps, TEXT("WealthObject"), &Z_Registration_Info_UScriptStruct_WealthObject, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWealthObject), 131552998U) },
 		{ FWealthActor::StaticStruct, Z_Construct_UScriptStruct_FWealthActor_Statics::NewStructOps, TEXT("WealthActor"), &Z_Registration_Info_UScriptStruct_WealthActor, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWealthActor), 3269834968U) },
@@ -1710,12 +1710,12 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUINature>()
 		{ FWealthURL::StaticStruct, Z_Construct_UScriptStruct_FWealthURL_Statics::NewStructOps, TEXT("WealthURL"), &Z_Registration_Info_UScriptStruct_WealthURL, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWealthURL), 3096628451U) },
 		{ FUINature::StaticStruct, Z_Construct_UScriptStruct_FUINature_Statics::NewStructOps, TEXT("UINature"), &Z_Registration_Info_UScriptStruct_UINature, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUINature), 2429838510U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UIATypes, UIATypes::StaticClass, TEXT("UIATypes"), &Z_Registration_Info_UClass_UIATypes, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIATypes), 209670687U) },
-		{ Z_Construct_UClass_UWealthData, UWealthData::StaticClass, TEXT("UWealthData"), &Z_Registration_Info_UClass_UWealthData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWealthData), 2790585097U) },
+		{ Z_Construct_UClass_UWealthData, UWealthData::StaticClass, TEXT("UWealthData"), &Z_Registration_Info_UClass_UWealthData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWealthData), 3745012089U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_1328093972(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo),
-		Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_UEFramework_Mine_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo));
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_2883879109(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ClassInfo),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::ScriptStructInfo),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IATypes_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

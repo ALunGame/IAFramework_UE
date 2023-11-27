@@ -111,24 +111,24 @@ protected:
 
 protected:
 
-	// //加载UObject反射回调函数
-	// IAOBJFUNC_TWO(BackObjectWealth, FName, BackName, UObject*, BackWealth);
-	// IAOBJFUNC_TWO(BackObjectWealthKind, TArray<FName>, BackNames, TArray<UObject*>, BackWealths);
-	//
-	// //加载UClass反射回调函数
-	// IAOBJFUNC_TWO(BackClassWealth, FName, BackName, UClass*, BackWealth);
-	// IAOBJFUNC_TWO(BackClassWealthKind, TArray<FName>, BackNames, TArray<UClass*>, BackWealths);
-	//
-	// //生成对象反射回调函数
-	// IAOBJFUNC_TWO(BackObjectSingle, FName, BackName, UObject*, BackObject);
-	// IAOBJFUNC_TWO(BackObjectKind, TArray<FName>, BackNames, TArray<UObject*>, BackObjects);
-	// IAOBJFUNC_TWO(BackObjectMulti, FName, BackName, TArray<UObject*>, BackObjects);
-	//
-	// IAOBJFUNC_TWO(BackActorSingle, FName, BackName, AActor*, BackActor);
-	// IAOBJFUNC_TWO(BackActorKind, TArray<FName>, BackNames, TArray<AActor*>, BackActors);
-	// IAOBJFUNC_TWO(BackActorMulti, FName, BackName, TArray<AActor*>, BackActors);
-	//
-	// IAOBJFUNC_TWO(BackWidgetSingle, FName, BackName, UUserWidget*, BackWidget);
-	// IAOBJFUNC_TWO(BackWidgetKind, TArray<FName>, BackNames, TArray<UUserWidget*>, BackWidgets);
-	// IAOBJFUNC_TWO(BackWidgetMulti, FName, BackName, TArray<UUserWidget*>, BackWidgets);
+	//加载UObject反射回调函数
+	IAOBJFUNC_TWO(BackObjectWealth, FName, BackName, UObject*, BackWealth);
+	IAOBJFUNC_TWO(BackObjectWealthKind, TArray<FName>, BackNames, TArray<UObject*>, BackWealths);
+	
+	//加载UClass反射回调函数
+	IAOBJFUNC_TWO(BackClassWealth, FName, BackName, UClass*, BackWealth);
+	IAOBJFUNC_TWO(BackClassWealthKind, TArray<FName>, BackNames, TArray<UClass*>, BackWealths);
+	
+	//生成对象反射回调函数
+	IAOBJFUNC_TWO(BackObjectSingle, FName, BackName, UObject*, BackObject);
+	IAOBJFUNC_TWO(BackObjectKind, TArray<FName>, BackNames, TArray<UObject*>, BackObjects);
+	IAOBJFUNC_TWO(BackObjectMulti, FName, BackName, TArray<UObject*>, BackObjects);
+	
+	IAOBJFUNC_TWO(BackActorSingle, FName, BackName, AActor*, BackActor);
+	IAOBJFUNC_TWO(BackActorKind, TArray<FName>, BackNames, TArray<AActor*>, BackActors);
+	IAOBJFUNC_TWO(BackActorMulti, FName, BackName, TArray<AActor*>, BackActors);
+	
+	IAOBJFUNC_TWO(BackWidgetSingle, FName, BackName, UUserWidget*, BackWidget);
+	IAOBJFUNC_TWO(BackWidgetKind, TArray<FName>, BackNames, TArray<UUserWidget*>, BackWidgets);
+	IAOBJFUNC_TWO(BackWidgetMulti, FName, BackName, TArray<UUserWidget*>, BackWidgets);
 };

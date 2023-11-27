@@ -294,7 +294,7 @@ void UIAWealth::LoadObjectWealth(FName WealthName, FName ObjectName, FName FunNa
 	if (WealthEntry->WealthObject)
 	{
 		//直接返回已经存在的资源给对象
-		//BackObjectWealth(ModuleType, ObjectName, FunName, WealthName, WealthEntry->WealthObject);
+		BackObjectWealth(Module, ObjectName, FunName, WealthName, WealthEntry->WealthObject);
 	}
 	else
 	{
@@ -346,7 +346,7 @@ void UIAWealth::LoadObjectWealthKind(FName WealthKind, FName ObjectName, FName F
 			NameGroup.Push(LoadWealthEntry[i]->WealthName);
 			WealthGroup.Push(LoadWealthEntry[i]->WealthObject);
 		}
-		//BackObjectWealthKind(ModuleType, ObjectName, FunName, NameGroup, WealthGroup);
+		BackObjectWealthKind(Module, ObjectName, FunName, NameGroup, WealthGroup);
 	}
 	else
 	{
@@ -381,7 +381,7 @@ void UIAWealth::LoadClassWealth(FName WealthName, FName ObjectName, FName FunNam
 	if (WealthEntry->WealthClass)
 	{
 		//直接把资源返回给申请对象
-		//BackClassWealth(ModuleType, ObjectName, FunName, WealthName, WealthEntry->WealthClass);
+		BackClassWealth(Module, ObjectName, FunName, WealthName, WealthEntry->WealthClass);
 	}
 	else
 	{
@@ -434,7 +434,7 @@ void UIAWealth::LoadClassWealthKind(FName WealthKind, FName ObjectName, FName Fu
 			WealthGroup.Push(LoadWealthEntry[i]->WealthClass);
 		}
 		//返回资源给请求对象
-		//BackClassWealthKind(ModuleType, ObjectName, FunName, NameGroup, WealthGroup);
+		BackClassWealthKind(Module, ObjectName, FunName, NameGroup, WealthGroup);
 	}
 	else
 	{
@@ -480,19 +480,19 @@ void UIAWealth::BuildSingleClassWealth(EWealthType WealthType, FName WealthName,
 		{
 			UObject* InstObject = NewObject<UObject>(this, WealthEntry->WealthClass);
 			InstObject->AddToRoot();
-			//BackObjectSingle(ModuleType, ObjectName, FunName, WealthName, InstObject);
+			BackObjectSingle(Module, ObjectName, FunName, WealthName, InstObject);
 		}
 		else if (WealthType == EWealthType::Actor)
 		{
 			AActor* InstActor = GetIAWorld()->SpawnActor<AActor>(WealthEntry->WealthClass, SpawnTransform);
-			//BackActorSingle(ModuleType, ObjectName, FunName, WealthName, InstActor);
+			BackActorSingle(Module, ObjectName, FunName, WealthName, InstActor);
 		}
 		else if (WealthType == EWealthType::Widget)
 		{
 			UUserWidget* InstWidget = CreateWidget<UUserWidget>(GetIAWorld(), WealthEntry->WealthClass);
 			//避免回收
 			GCWidgetGroup.Push(InstWidget);
-			//BackWidgetSingle(ModuleType, ObjectName, FunName, WealthName, InstWidget);
+			BackWidgetSingle(Module, ObjectName, FunName, WealthName, InstWidget);
 		}
 	}
 	else
@@ -654,7 +654,7 @@ void UIAWealth::DealObjectSingleLoadStack()
 			//设置对应资源完成
 			ObjectSingleLoadStack[i]->WealthEntry->WealthObject = ObjectSingleLoadStack[i]->WealthEntry->WealthPath.ResolveObject();
 			//返回资源给对象
-			//BackObjectWealth(ModuleType, ObjectSingleLoadStack[i]->ObjectName, ObjectSingleLoadStack[i]->FunName, ObjectSingleLoadStack[i]->WealthEntry->WealthName, ObjectSingleLoadStack[i]->WealthEntry->WealthObject);
+			BackObjectWealth(Module, ObjectSingleLoadStack[i]->ObjectName, ObjectSingleLoadStack[i]->FunName, ObjectSingleLoadStack[i]->WealthEntry->WealthName, ObjectSingleLoadStack[i]->WealthEntry->WealthObject);
 			//添加已经加载完成的节点到临时序列
 			CompleteStack.Push(ObjectSingleLoadStack[i]);
 		}
@@ -696,7 +696,7 @@ void UIAWealth::DealObjectKindLoadStack()
 				WealthGroup.Push(ObjectKindLoadStack[i]->UnLoadWealthEntry[j]->WealthObject);
 			}
 			//返回数据给请求对象
-			//BackObjectWealthKind(ModuleType, ObjectKindLoadStack[i]->ObjectName, ObjectKindLoadStack[i]->FunName, NameGroup, WealthGroup);
+			BackObjectWealthKind(Module, ObjectKindLoadStack[i]->ObjectName, ObjectKindLoadStack[i]->FunName, NameGroup, WealthGroup);
 			//添加节点到已完成序列
 			CompleteStack.Push(ObjectKindLoadStack[i]);
 		}
@@ -727,7 +727,7 @@ void UIAWealth::DealClassSingleLoadStack()
 			if (ClassSingleLoadStack[i]->IsLoadClass)
 			{
 				//返回资源给对象
-				//BackClassWealth(ModuleType, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, ClassSingleLoadStack[i]->WealthEntry->WealthClass);
+				BackClassWealth(Module, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, ClassSingleLoadStack[i]->WealthEntry->WealthClass);
 			}
 			else
 			{
@@ -736,19 +736,19 @@ void UIAWealth::DealClassSingleLoadStack()
 				{
 					UObject* InstObject = NewObject<UObject>(this, ClassSingleLoadStack[i]->WealthEntry->WealthClass);
 					InstObject->AddToRoot();
-					//BackObjectSingle(ModuleType, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstObject);
+					BackObjectSingle(Module, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstObject);
 				}
 				else if (ClassSingleLoadStack[i]->WealthEntry->WealthType == EWealthType::Actor)
 				{
 					AActor* InstActor = GetIAWorld()->SpawnActor<AActor>(ClassSingleLoadStack[i]->WealthEntry->WealthClass, ClassSingleLoadStack[i]->SpawnTransform);
-					//BackActorSingle(ModuleType, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstActor);
+					BackActorSingle(Module, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstActor);
 				}
 				else if (ClassSingleLoadStack[i]->WealthEntry->WealthType == EWealthType::Widget)
 				{
 					UUserWidget* InstWidget = CreateWidget<UUserWidget>(GetIAWorld(), ClassSingleLoadStack[i]->WealthEntry->WealthClass);
 					//避免回收
 					GCWidgetGroup.Push(InstWidget);
-					//BackWidgetSingle(ModuleType, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstWidget);
+					BackWidgetSingle(Module, ClassSingleLoadStack[i]->ObjectName, ClassSingleLoadStack[i]->FunName, ClassSingleLoadStack[i]->WealthEntry->WealthName, InstWidget);
 				}
 			}
 			//添加已经加载完成的节点到临时序列
@@ -798,7 +798,7 @@ void UIAWealth::DealClassKindLoadStack()
 					WealthGroup.Push(ClassKindLoadStack[i]->LoadWealthEntry[j]->WealthClass);
 				}
 				//返回资源给请求对象
-				//BackClassWealthKind(ModuleType, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, NameGroup, WealthGroup);
+				BackClassWealthKind(Module, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, NameGroup, WealthGroup);
 				//添加该节点到已完成序列
 				CompleteStack.Push(ClassKindLoadStack[i]);
 			}
@@ -820,7 +820,7 @@ void UIAWealth::DealClassKindLoadStack()
 					if (ClassKindLoadStack[i]->LoadWealthEntry.Num() == 0)
 					{
 						//给请求者传递生成的对象
-						//BackObjectKind(ModuleType, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->ObjectGroup);
+						BackObjectKind(Module, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->ObjectGroup);
 						//添加到完成序列
 						CompleteStack.Push(ClassKindLoadStack[i]);
 					}
@@ -838,7 +838,7 @@ void UIAWealth::DealClassKindLoadStack()
 					if (ClassKindLoadStack[i]->LoadWealthEntry.Num() == 0)
 					{
 						//给请求者传递生成的对象
-						//BackActorKind(ModuleType, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->ActorGroup);
+						BackActorKind(Module, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->ActorGroup);
 						//添加到完成序列
 						CompleteStack.Push(ClassKindLoadStack[i]);
 					}
@@ -855,7 +855,7 @@ void UIAWealth::DealClassKindLoadStack()
 					if (ClassKindLoadStack[i]->LoadWealthEntry.Num() == 0)
 					{
 						//给请求者传递生成的对象
-						//BackWidgetKind(ModuleType, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->WidgetGroup);
+						BackWidgetKind(Module, ClassKindLoadStack[i]->ObjectName, ClassKindLoadStack[i]->FunName, ClassKindLoadStack[i]->NameGroup, ClassKindLoadStack[i]->WidgetGroup);
 						//添加到完成序列
 						CompleteStack.Push(ClassKindLoadStack[i]);
 					}
@@ -897,7 +897,7 @@ void UIAWealth::DealClassMultiLoadStack()
 				if (ClassMultiLoadStack[i]->ObjectGroup.Num() == ClassMultiLoadStack[i]->Amount)
 				{
 					//返回对象给请求者
-					//BackObjectMulti(ModuleType, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->ObjectGroup);
+					BackObjectMulti(Module, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->ObjectGroup);
 					//添加到完成序列
 					CompleteStack.Push(ClassMultiLoadStack[i]);
 				}
@@ -914,7 +914,7 @@ void UIAWealth::DealClassMultiLoadStack()
 				if (ClassMultiLoadStack[i]->ActorGroup.Num() == ClassMultiLoadStack[i]->Amount)
 				{
 					//给请求者传递生成的对象
-					//BackActorMulti(ModuleType, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->ActorGroup);
+					BackActorMulti(Module, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->ActorGroup);
 					//添加到完成序列
 					CompleteStack.Push(ClassMultiLoadStack[i]);
 				}
@@ -930,7 +930,7 @@ void UIAWealth::DealClassMultiLoadStack()
 				if (ClassMultiLoadStack[i]->WidgetGroup.Num() == ClassMultiLoadStack[i]->Amount)
 				{
 					//给请求者传递生成的对象
-					//BackWidgetMulti(ModuleType, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->WidgetGroup);
+					BackWidgetMulti(Module, ClassMultiLoadStack[i]->ObjectName, ClassMultiLoadStack[i]->FunName, ClassMultiLoadStack[i]->WealthEntry->WealthName, ClassMultiLoadStack[i]->WidgetGroup);
 					//添加到完成序列
 					CompleteStack.Push(ClassMultiLoadStack[i]);
 				}

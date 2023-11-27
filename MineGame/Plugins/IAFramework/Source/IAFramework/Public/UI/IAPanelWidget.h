@@ -79,7 +79,7 @@ protected:
 	
 protected:
 
-	//IAOBJFUNC_TWO(ExitCallBack, ELayoutType, LayoutType, UPanelWidget*, WorkLayout);
+	IAOBJFUNC_TWO(ExitCallBack, ELayoutType, LayoutType, UPanelWidget*, WorkLayout);
 
-	//IAOBJFUNC_ONE(OperatorUIPanel, FName, PanelName);
+	IAOBJFUNC_ONE(OperatorUIPanel, FName, PanelName);
 };

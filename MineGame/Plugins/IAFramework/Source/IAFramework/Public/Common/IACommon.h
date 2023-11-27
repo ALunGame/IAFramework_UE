@@ -9,6 +9,7 @@
 #include "IACommon.generated.h"
 
 class AIADriver;
+class UIATimerModule;
 
 namespace IA
 {
@@ -129,6 +130,8 @@ private:
 	static UIACommon* IAInst;
 
 	AIADriver* Driver;
+
+	UIATimerModule* TimerModule;
 	
 	APlayerController* PlayerController;
 	
@@ -139,6 +142,10 @@ public:
 	void SetDriver(AIADriver* InDriver);
 
 	AIADriver* GetDriver();
+
+	void SetTimerModule(UIATimerModule* InTimerModule);
+
+	UIATimerModule* GetTimerModule();
 	
 	void InitController(APlayerController* InController);
 

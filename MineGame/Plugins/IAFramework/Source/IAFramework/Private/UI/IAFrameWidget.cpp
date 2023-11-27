@@ -62,12 +62,7 @@ void UIAFrameWidget::ShowUIPanel(FName PanelName)
 		//添加名字到预显示名字组
 		WaitShowPanelName.Push(PanelName);
 		//启动循环检测加载完毕则显示函数, 每0.3秒检测一次
-		//InvokeRepeat(WaitShowTaskName, 0.3f, 0.3f, this, &UIAFrameWidget::WaitShowPanel);
-
-		// if (WaitShowHandle)
-		// {
-		// 	
-		// }
+		SetTimer<UIAFrameWidget>("WaitShowPanel",this,&UIAFrameWidget::WaitShowPanel,0.3f);
 		return;
 	}
 
@@ -162,7 +157,7 @@ void UIAFrameWidget::AcceptAdvancePanel(FName BackName, UUserWidget* BackWidget)
 	}
 
 	//注册到框架,不注册类名, BackName必须是面板名以及ObjectName
-	PanelWidget->RegisterToModule(ModuleType, BackName);
+	PanelWidget->RegisterToModule(Module, BackName);
 
 	//添加到全部组
 	AllPanelGroup.Add(BackName, PanelWidget);
@@ -180,7 +175,7 @@ void UIAFrameWidget::AcceptPanelWidget(FName BackName, UUserWidget* BackWidget)
 	}
 
 	//注册到框架,不注册类名, BackName必须是面板名以及ObjectName
-	PanelWidget->RegisterToModule(ModuleType, BackName);
+	PanelWidget->RegisterToModule(Module, BackName);
 
 	//添加到全部组
 	AllPanelGroup.Add(BackName, PanelWidget);
@@ -320,6 +315,23 @@ void UIAFrameWidget::DoShowUIPanel(FName PanelName)
 
 void UIAFrameWidget::WaitShowPanel()
 {
+	TArray<FName> CompleteName;
+	for (int i = 0; i < WaitShowPanelName.Num(); ++i)
+	{
+		if (AllPanelGroup.Contains(WaitShowPanelName[i]))
+		{
+			//执行进入界面方法
+			DoEnterUIPanel(WaitShowPanelName[i]);
+			//添加到完成组
+			CompleteName.Push(WaitShowPanelName[i]);
+		}
+	}
+	//移除完成的UI
+	for (int i = 0; i < CompleteName.Num(); ++i)
+		WaitShowPanelName.Remove(CompleteName[i]);
+	//如果没有等待显示的UI了, 停止该循环函数
+	if (WaitShowPanelName.Num() == 0)
+		StopTimer("WaitShowPanel");
 }
 
 void UIAFrameWidget::EnterPanelDoNothing(UCanvasPanel* WorkLayout, UIAPanelWidget* PanelWidget)

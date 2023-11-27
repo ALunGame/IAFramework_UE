@@ -52,7 +52,7 @@ FName IIAOO::GetClassName()
 
 EGameModule IIAOO::GetModuleType() const
 {
-	return ModuleType;
+	return Module;
 }
 
 UObject* IIAOO::GetObjectBody() const
@@ -142,6 +142,7 @@ void IIAOO::IAUnLoading() {}
 
 void IIAOO::IARelease()
 {
+	StopTimers();
 }
 
 void IIAOO::OnEnable()
@@ -163,7 +164,7 @@ void IIAOO::IADestroy()
 
 void IIAOO::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
 {
-	if (Agreement.ModuleType == ModuleType)
+	if (Agreement.ModuleType == Module)
 		IModule->ExecuteFunction(Agreement, Param);
 	else
 		IDriver->ExecuteFunction(Agreement, Param);
@@ -171,7 +172,7 @@ void IIAOO::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
 
 void IIAOO::ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param)
 {
-	if (Agreement.ModuleType == ModuleType)
+	if (Agreement.ModuleType == Module)
 		IModule->ExecuteFunction(Agreement, Param);
 	else
 		IDriver->ExecuteFunction(Agreement, Param);

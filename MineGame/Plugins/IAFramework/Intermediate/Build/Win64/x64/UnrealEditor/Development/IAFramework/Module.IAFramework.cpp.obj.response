@@ -1,6 +1,6 @@
-D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp
+D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp
 /I .
-/I D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Source\IAFramework\Private
+/I D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject\UHT
 /I Runtime\CoreUObject\Public
 /I Runtime
@@ -273,9 +273,9 @@ D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\W
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\UnrealEditor\Inc\IAFramework\UHT
-/I D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Source
-/I D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Source\IAFramework\Public
+/I D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\UnrealEditor\Inc\IAFramework\UHT
+/I D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source
+/I D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Public
 /external:W0
 /external:I ThirdParty\mimalloc\include
 /external:I ThirdParty\LibTiff\Source\Win64
@@ -285,12 +285,12 @@ D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\W
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"D:\GitProject\UEFramework\Mine\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/FI"D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Definitions.IAFramework.h"
-/Yu"D:\GitProject\UEFramework\Mine\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/Fp"D:\GitProject\UEFramework\Mine\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
-/Fo"D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.obj"
-/sourceDependencies D:\GitProject\UEFramework\Mine\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.dep.json
+/FI"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/FI"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Definitions.IAFramework.h"
+/Yu"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/Fp"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/Fo"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.obj"
+/sourceDependencies D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

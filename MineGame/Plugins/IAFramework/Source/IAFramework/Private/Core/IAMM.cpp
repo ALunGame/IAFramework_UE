@@ -14,7 +14,7 @@ void IIAMM::AssignModule(UIAModule* Mod)
 
 void IIAMM::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
 {
-	if (Agreement.ModuleType == ModuleType)
+	if (Agreement.ModuleType == Module)
 		IModule->ExecuteFunction(Agreement, Param);
 	else
 		IDriver->ExecuteFunction(Agreement, Param);
@@ -22,7 +22,7 @@ void IIAMM::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
 
 void IIAMM::ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param)
 {
-	if (Agreement.ModuleType == ModuleType)
+	if (Agreement.ModuleType == Module)
 		IModule->ExecuteFunction(Agreement, Param);
 	else
 		IDriver->ExecuteFunction(Agreement, Param);

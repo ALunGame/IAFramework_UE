@@ -25,6 +25,16 @@ AIADriver* UIACommon::GetDriver()
 	return Driver;
 }
 
+void UIACommon::SetTimerModule(UIATimerModule* InTimerModule)
+{
+	TimerModule = InTimerModule;
+}
+
+UIATimerModule* UIACommon::GetTimerModule()
+{
+	return TimerModule;
+}
+
 void UIACommon::InitController(APlayerController* InController)
 {
 	PlayerController = InController;
