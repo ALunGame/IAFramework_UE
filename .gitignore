@@ -23,3 +23,5 @@ MineGame/Build/
 *.suo
 *.xcworkspace
 *.vsconfig
+
+/MineGame/Content/Res/PolygonAdventure/Maps/Demonstration.umap
