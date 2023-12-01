@@ -29,6 +29,25 @@ public:
 	virtual void PanelResume();  //解冻
 	virtual void PanelExit();    //销毁
 
+	//蓝图重写
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "进入界面"))
+	void OnPanelEnter();   //第一次进入界面, 只会执行一次
+	
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "显示界面"))
+	void OnPanelDisplay(); //第二次以及以后N次显示在界面
+
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "隐藏界面"))
+	void OnPanelHidden();  //隐藏
+
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "界面冻结"))
+	void OnPanelFreeze();  //冻结
+
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "界面解冻"))
+	void OnPanelResume();  //解冻
+
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "界面销毁"))
+	void OnPanelExit();    //销毁
+
 	//动画回调函数
 	UFUNCTION(BlueprintImplementableEvent)
 	float DisplayEnterMovie();

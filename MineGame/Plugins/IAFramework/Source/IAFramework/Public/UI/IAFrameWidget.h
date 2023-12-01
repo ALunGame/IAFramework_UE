@@ -30,10 +30,14 @@ public:
 	//显示面板 面板 = UI功能面板
 	UFUNCTION()
 	void ShowUIPanel(FName PanelName);
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "显示UI"))
+	void OnShowUIPanel(FName PanelName);
 
 	//隐藏UI
 	UFUNCTION()
 	void HideUIPanel(FName PanelName);
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "隐藏UI"))
+	void OnHideUIPanel(FName PanelName);
 
 	//销毁UI
 	UFUNCTION()

@@ -22,6 +22,8 @@ FName UIAPanelWidget::AdvanceLoadPanelName(TEXT("AdvanceLoadPanel"));
 void UIAPanelWidget::PanelEnter()
 {
 	SetVisibility(ESlateVisibility::Visible);
+	//通知蓝图
+	OnPanelEnter();
 	//调用进入界面动画
 	DisplayEnterMovie();
 }
@@ -29,30 +31,42 @@ void UIAPanelWidget::PanelEnter()
 void UIAPanelWidget::PanelDisplay()
 {
 	SetVisibility(ESlateVisibility::Visible);
+	//通知蓝图
+	OnPanelDisplay();
 	//调用进入界面动画
 	DisplayEnterMovie();
 }
 
 void UIAPanelWidget::PanelHidden()
 {
+	//通知蓝图
+	OnPanelHidden();
 	//运行完移出界面动画后调用隐藏函数
-	//InvokeDelay(PanelHiddenName, DisplayLeaveMovie(), this, &UIAPanelWidget::SetSelfHidden);
+	SetTimer(PanelHiddenName,this, &UIAPanelWidget::SetSelfHidden, DisplayLeaveMovie());
 }
 
 void UIAPanelWidget::PanelFreeze()
 {
+	//通知蓝图
+	OnPanelFreeze();
 }
 
 void UIAPanelWidget::PanelResume()
 {
+	//通知蓝图
+	OnPanelResume();
 }
 
 void UIAPanelWidget::PanelExit()
 {
+	//通知蓝图
+	OnPanelExit();
+	
 	//如果UI面板正在显示
 	if (GetVisibility() != ESlateVisibility::Hidden)
 	{
-		//InvokeDelay(PanelHiddenName, DisplayLeaveMovie(), this, &UIAPanelWidget::RemoveCallBack);
+		//运行完移出界面动画后调用隐藏函数
+		SetTimer(PanelHiddenName,this, &UIAPanelWidget::SetSelfHidden, DisplayLeaveMovie());
 	}
 	else
 		RemoveCallBack();

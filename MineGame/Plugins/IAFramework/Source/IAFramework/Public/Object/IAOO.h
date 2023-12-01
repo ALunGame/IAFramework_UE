@@ -150,7 +150,7 @@ protected:
 
 	//设置计时器
 	template<class UserClass>
-	void SetTimer(FName TimerName, UserClass* UserObj, typename IATimerEvent::TUObjectMethodDelegate<UserClass>::FMethodPtr InMethod, float InRateTime, int InTotalRunTimes = -1, float InFirstDelayTime = -1.f);
+	void SetTimer(FName TimerName, UserClass* UserObj, typename IATimerEvent::TUObjectMethodDelegate<UserClass>::FMethodPtr InMethod, float InRateTime, int InTotalRunTimes = 1, float InFirstDelayTime = -1.f);
 
 	//暂停计时器
 	void StopTimer(FName TimerName);

@@ -23,5 +23,21 @@ void AIAActor::IARelease()
 	GetIAWorld()->DestroyActor(this);
 }
 
+void AIAActor::SetCacheName(FName InCacheName)
+{
+	CacheName = InCacheName;
+}
+
+void AIAActor::Recycle()
+{
+	if (!CacheName.IsValid())
+	{
+		IA::Error() << "演员回收失败，CacheName非法！！" << GetFName() << IA::Endl();
+		return;
+	}
+
+	
+}
+
 
 

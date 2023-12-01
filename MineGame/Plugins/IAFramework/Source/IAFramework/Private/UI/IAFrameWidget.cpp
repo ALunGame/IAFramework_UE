@@ -26,9 +26,7 @@ bool UIAFrameWidget::Initialize()
 	NormalLucency = FLinearColor(1.f, 1.f, 1.f, 0.f);
 	TranslucenceLucency = FLinearColor(0.f, 0.f, 0.f, 0.6f);
 	ImPenetrableLucency = FLinearColor(0.f, 0.f, 0.f, 0.3f);
-
-	//WaitShowTaskName = FName("WaitShowTask");
-
+	
 	return true;
 }
 
@@ -48,6 +46,7 @@ void UIAFrameWidget::ShowUIPanel(FName PanelName)
 	//如果面板是否已经显示在界面上
 	if (ShowPanelGroup.Contains(PanelName) || PopPanelStack.Contains(PanelName))
 		return;
+	
 	//如果判断是否已经加载该面板
 	if (!AllPanelGroup.Contains(PanelName) && !LoadedPanelName.Contains(PanelName))
 	{
@@ -62,7 +61,7 @@ void UIAFrameWidget::ShowUIPanel(FName PanelName)
 		//添加名字到预显示名字组
 		WaitShowPanelName.Push(PanelName);
 		//启动循环检测加载完毕则显示函数, 每0.3秒检测一次
-		SetTimer<UIAFrameWidget>("WaitShowPanel",this,&UIAFrameWidget::WaitShowPanel,0.3f);
+		SetTimer<UIAFrameWidget>("WaitShowPanel",this,&UIAFrameWidget::WaitShowPanel,0.3f,-1);
 		return;
 	}
 
@@ -311,6 +310,9 @@ void UIAFrameWidget::DoShowUIPanel(FName PanelName)
 		ShowPanelReverse(PanelWidget);
 		break;
 	}
+
+	//通知蓝图
+	OnShowUIPanel(PanelName);
 }
 
 void UIAFrameWidget::WaitShowPanel()
@@ -585,8 +587,12 @@ void UIAFrameWidget::HidePanelDoNothing(UIAPanelWidget* PanelWidget)
 {
 	//从显示组移除
 	ShowPanelGroup.Remove(PanelWidget->GetObjectName());
+	
 	//运行隐藏生命周期
 	PanelWidget->PanelHidden();
+	
+	//通知蓝图
+	OnHideUIPanel(PanelWidget->GetObjectName());
 }
 
 void UIAFrameWidget::HidePanelHideOther(UIAPanelWidget* PanelWidget)
@@ -601,6 +607,9 @@ void UIAFrameWidget::HidePanelHideOther(UIAPanelWidget* PanelWidget)
 
 	//运行隐藏生命周期
 	PanelWidget->PanelHidden();
+
+	//通知蓝图
+	OnHideUIPanel(PanelWidget->GetObjectName());
 }
 
 void UIAFrameWidget::HidePanelReverse(UIAPanelWidget* PanelWidget)
@@ -620,6 +629,9 @@ void UIAFrameWidget::HidePanelReverse(UIAPanelWidget* PanelWidget)
 	PopPanelStack.Remove(PanelWidget->GetObjectName());
 	//执行隐藏函数
 	PanelWidget->PanelHidden();
+
+	//通知蓝图
+	OnHideUIPanel(PanelWidget->GetObjectName());
 
 	//调整弹窗栈
 	PopStack.Pop();

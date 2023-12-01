@@ -20,7 +20,7 @@ void UIACommon::SetDriver(AIADriver* InDriver)
 	Driver = InDriver;
 }
 
-AIADriver* UIACommon::GetDriver()
+AIADriver* UIACommon::GetDriver() const
 {
 	return Driver;
 }
@@ -30,9 +30,29 @@ void UIACommon::SetTimerModule(UIATimerModule* InTimerModule)
 	TimerModule = InTimerModule;
 }
 
-UIATimerModule* UIACommon::GetTimerModule()
+UIATimerModule* UIACommon::GetTimerModule() const
 {
 	return TimerModule;
+}
+
+void UIACommon::SetAssetModule(UIAAssetModule* InAssetModule)
+{
+	AssetModule = InAssetModule;
+}
+
+UIAAssetModule* UIACommon::GetAssetModule() const
+{
+	return AssetModule;
+}
+
+void UIACommon::SetCacheModule(UIACacheModule* InCacheModule)
+{
+	CacheModule = InCacheModule;
+}
+
+UIACacheModule* UIACommon::GetCacheModule() const
+{
+	return CacheModule;
 }
 
 void UIACommon::InitController(APlayerController* InController)

@@ -50,6 +50,36 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_DisplayLeaveMovie),&Parms);
 		return Parms.ReturnValue;
 	}
+	static FName NAME_UIAPanelWidget_OnPanelDisplay = FName(TEXT("OnPanelDisplay"));
+	void UIAPanelWidget::OnPanelDisplay()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelDisplay),NULL);
+	}
+	static FName NAME_UIAPanelWidget_OnPanelEnter = FName(TEXT("OnPanelEnter"));
+	void UIAPanelWidget::OnPanelEnter()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelEnter),NULL);
+	}
+	static FName NAME_UIAPanelWidget_OnPanelExit = FName(TEXT("OnPanelExit"));
+	void UIAPanelWidget::OnPanelExit()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelExit),NULL);
+	}
+	static FName NAME_UIAPanelWidget_OnPanelFreeze = FName(TEXT("OnPanelFreeze"));
+	void UIAPanelWidget::OnPanelFreeze()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelFreeze),NULL);
+	}
+	static FName NAME_UIAPanelWidget_OnPanelHidden = FName(TEXT("OnPanelHidden"));
+	void UIAPanelWidget::OnPanelHidden()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelHidden),NULL);
+	}
+	static FName NAME_UIAPanelWidget_OnPanelResume = FName(TEXT("OnPanelResume"));
+	void UIAPanelWidget::OnPanelResume()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UIAPanelWidget_OnPanelResume),NULL);
+	}
 	void UIAPanelWidget::StaticRegisterNativesUIAPanelWidget()
 	{
 	}
@@ -111,6 +141,162 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe7\xac\xac\xe4\xb8\x80\xe6\xac\xa1\xe8\xbf\x9b\xe5\x85\xa5\xe7\x95\x8c\xe9\x9d\xa2, \xe5\x8f\xaa\xe4\xbc\x9a\xe6\x89\xa7\xe8\xa1\x8c\xe4\xb8\x80\xe6\xac\xa1\n" },
+		{ "DisplayName", "\xe6\x98\xbe\xe7\xa4\xba\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe7\xac\xac\xe4\xb8\x80\xe6\xac\xa1\xe8\xbf\x9b\xe5\x85\xa5\xe7\x95\x8c\xe9\x9d\xa2, \xe5\x8f\xaa\xe4\xbc\x9a\xe6\x89\xa7\xe8\xa1\x8c\xe4\xb8\x80\xe6\xac\xa1" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelDisplay", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe8\x93\x9d\xe5\x9b\xbe\xe9\x87\x8d\xe5\x86\x99\n" },
+		{ "DisplayName", "\xe8\xbf\x9b\xe5\x85\xa5\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe8\x93\x9d\xe5\x9b\xbe\xe9\x87\x8d\xe5\x86\x99" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelEnter", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe8\xa7\xa3\xe5\x86\xbb\n" },
+		{ "DisplayName", "\xe7\x95\x8c\xe9\x9d\xa2\xe9\x94\x80\xe6\xaf\x81" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe8\xa7\xa3\xe5\x86\xbb" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelExit", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelExit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelExit_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe9\x9a\x90\xe8\x97\x8f\n" },
+		{ "DisplayName", "\xe7\x95\x8c\xe9\x9d\xa2\xe5\x86\xbb\xe7\xbb\x93" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe9\x9a\x90\xe8\x97\x8f" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelFreeze", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe7\xac\xac\xe4\xba\x8c\xe6\xac\xa1\xe4\xbb\xa5\xe5\x8f\x8a\xe4\xbb\xa5\xe5\x90\x8eN\xe6\xac\xa1\xe6\x98\xbe\xe7\xa4\xba\xe5\x9c\xa8\xe7\x95\x8c\xe9\x9d\xa2\n" },
+		{ "DisplayName", "\xe9\x9a\x90\xe8\x97\x8f\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe7\xac\xac\xe4\xba\x8c\xe6\xac\xa1\xe4\xbb\xa5\xe5\x8f\x8a\xe4\xbb\xa5\xe5\x90\x8eN\xe6\xac\xa1\xe6\x98\xbe\xe7\xa4\xba\xe5\x9c\xa8\xe7\x95\x8c\xe9\x9d\xa2" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelHidden", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe5\x86\xbb\xe7\xbb\x93\n" },
+		{ "DisplayName", "\xe7\x95\x8c\xe9\x9d\xa2\xe8\xa7\xa3\xe5\x86\xbb" },
+		{ "ModuleRelativePath", "Public/UI/IAPanelWidget.h" },
+		{ "ToolTip", "\xe5\x86\xbb\xe7\xbb\x93" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "OnPanelResume", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_OnPanelResume()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_OnPanelResume_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UIAPanelWidget);
 	UClass* Z_Construct_UClass_UIAPanelWidget_NoRegister()
 	{
@@ -138,6 +324,12 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UIAPanelWidget_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UIAPanelWidget_DisplayEnterMovie, "DisplayEnterMovie" }, // 2849526652
 		{ &Z_Construct_UFunction_UIAPanelWidget_DisplayLeaveMovie, "DisplayLeaveMovie" }, // 405018921
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelDisplay, "OnPanelDisplay" }, // 130356948
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelEnter, "OnPanelEnter" }, // 2994016926
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelExit, "OnPanelExit" }, // 201418604
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelFreeze, "OnPanelFreeze" }, // 3726502485
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelHidden, "OnPanelHidden" }, // 3522684975
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnPanelResume, "OnPanelResume" }, // 473524371
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAPanelWidget_Statics::Class_MetaDataParams[] = {
@@ -194,9 +386,9 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAPanelWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 3413582972U) },
+		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 2232114081U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAPanelWidget_h_666644748(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAPanelWidget_h_461967266(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAPanelWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAPanelWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

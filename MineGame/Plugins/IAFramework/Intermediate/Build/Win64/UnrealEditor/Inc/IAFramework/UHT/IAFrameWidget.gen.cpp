@@ -79,6 +79,28 @@ void EmptyLinkFunctionForGeneratedCodeIAFrameWidget() {}
 		P_THIS->AdvanceLoadPanel(Z_Param_PanelName);
 		P_NATIVE_END;
 	}
+	struct IAFrameWidget_eventOnHideUIPanel_Parms
+	{
+		FName PanelName;
+	};
+	struct IAFrameWidget_eventOnShowUIPanel_Parms
+	{
+		FName PanelName;
+	};
+	static FName NAME_UIAFrameWidget_OnHideUIPanel = FName(TEXT("OnHideUIPanel"));
+	void UIAFrameWidget::OnHideUIPanel(FName PanelName)
+	{
+		IAFrameWidget_eventOnHideUIPanel_Parms Parms;
+		Parms.PanelName=PanelName;
+		ProcessEvent(FindFunctionChecked(NAME_UIAFrameWidget_OnHideUIPanel),&Parms);
+	}
+	static FName NAME_UIAFrameWidget_OnShowUIPanel = FName(TEXT("OnShowUIPanel"));
+	void UIAFrameWidget::OnShowUIPanel(FName PanelName)
+	{
+		IAFrameWidget_eventOnShowUIPanel_Parms Parms;
+		Parms.PanelName=PanelName;
+		ProcessEvent(FindFunctionChecked(NAME_UIAFrameWidget_OnShowUIPanel),&Parms);
+	}
 	void UIAFrameWidget::StaticRegisterNativesUIAFrameWidget()
 	{
 		UClass* Class = UIAFrameWidget::StaticClass();
@@ -336,6 +358,66 @@ void EmptyLinkFunctionForGeneratedCodeIAFrameWidget() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics
+	{
+		static const UECodeGen_Private::FNamePropertyParams NewProp_PanelName;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::NewProp_PanelName = { "PanelName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IAFrameWidget_eventOnHideUIPanel_Parms, PanelName), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::NewProp_PanelName,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "DisplayName", "\xe9\x9a\x90\xe8\x97\x8fUI" },
+		{ "ModuleRelativePath", "Public/UI/IAFrameWidget.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAFrameWidget, nullptr, "OnHideUIPanel", nullptr, nullptr, sizeof(IAFrameWidget_eventOnHideUIPanel_Parms), Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics
+	{
+		static const UECodeGen_Private::FNamePropertyParams NewProp_PanelName;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::NewProp_PanelName = { "PanelName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IAFrameWidget_eventOnShowUIPanel_Parms, PanelName), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::NewProp_PanelName,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "DisplayName", "\xe6\x98\xbe\xe7\xa4\xbaUI" },
+		{ "ModuleRelativePath", "Public/UI/IAFrameWidget.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAFrameWidget, nullptr, "OnShowUIPanel", nullptr, nullptr, sizeof(IAFrameWidget_eventOnShowUIPanel_Parms), Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UIAFrameWidget_ShowUIPanel_Statics
 	{
 		struct IAFrameWidget_eventShowUIPanel_Parms
@@ -421,6 +503,8 @@ void EmptyLinkFunctionForGeneratedCodeIAFrameWidget() {}
 		{ &Z_Construct_UFunction_UIAFrameWidget_ExitCallBack, "ExitCallBack" }, // 836102127
 		{ &Z_Construct_UFunction_UIAFrameWidget_ExitUIPanel, "ExitUIPanel" }, // 3659371509
 		{ &Z_Construct_UFunction_UIAFrameWidget_HideUIPanel, "HideUIPanel" }, // 2149281232
+		{ &Z_Construct_UFunction_UIAFrameWidget_OnHideUIPanel, "OnHideUIPanel" }, // 31893489
+		{ &Z_Construct_UFunction_UIAFrameWidget_OnShowUIPanel, "OnShowUIPanel" }, // 3149802187
 		{ &Z_Construct_UFunction_UIAFrameWidget_ShowUIPanel, "ShowUIPanel" }, // 2100946037
 	};
 #if WITH_METADATA
@@ -525,9 +609,9 @@ void EmptyLinkFunctionForGeneratedCodeIAFrameWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAFrameWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAFrameWidget, UIAFrameWidget::StaticClass, TEXT("UIAFrameWidget"), &Z_Registration_Info_UClass_UIAFrameWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAFrameWidget), 3018154819U) },
+		{ Z_Construct_UClass_UIAFrameWidget, UIAFrameWidget::StaticClass, TEXT("UIAFrameWidget"), &Z_Registration_Info_UClass_UIAFrameWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAFrameWidget), 4075698501U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAFrameWidget_h_4068498706(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAFrameWidget_h_2726564988(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAFrameWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAFrameWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

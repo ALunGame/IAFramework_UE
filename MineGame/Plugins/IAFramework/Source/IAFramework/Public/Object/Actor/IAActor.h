@@ -31,7 +31,17 @@ public:
 
 	virtual void IARelease() override;
 
+	//设置缓存名
+	void SetCacheName(FName InCacheName);
+
+	//回收
+	void Recycle();
+
 protected:
 
 	virtual void BeginPlay() override;
+
+private:
+
+	FName CacheName;
 };
