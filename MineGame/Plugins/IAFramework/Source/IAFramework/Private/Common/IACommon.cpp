@@ -55,6 +55,16 @@ UIACacheModule* UIACommon::GetCacheModule() const
 	return CacheModule;
 }
 
+void UIACommon::SetUIModule(UIAUIModule* InUIModule)
+{
+	UIModule = InUIModule;
+}
+
+UIAUIModule* UIACommon::GetUIModule() const
+{
+	return UIModule;
+}
+
 void UIACommon::InitController(APlayerController* InController)
 {
 	PlayerController = InController;

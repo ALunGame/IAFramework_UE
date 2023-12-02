@@ -1,7 +1,9 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Object/Actor/IAActor.h"
+#include "Object/IAActor.h"
+
+#include "Module/IACacheModule.h"
 
 AIAActor::AIAActor()
 {
@@ -28,15 +30,14 @@ void AIAActor::SetCacheName(FName InCacheName)
 	CacheName = InCacheName;
 }
 
+FName AIAActor::GetCacheName() const
+{
+	return CacheName;
+}
+
 void AIAActor::Recycle()
 {
-	if (!CacheName.IsValid())
-	{
-		IA::Error() << "演员回收失败，CacheName非法！！" << GetFName() << IA::Endl();
-		return;
-	}
-
-	
+	UIACommon::Get()->GetCacheModule()->RecycleActor(this);
 }
 
 

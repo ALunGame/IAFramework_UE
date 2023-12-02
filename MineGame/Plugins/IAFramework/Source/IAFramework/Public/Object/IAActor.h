@@ -3,13 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "GameFramework/Actor.h"
 #include "Object/IAOO.h"
-#include "IAActorComponent.generated.h"
+#include "IAActor.generated.h"
 
-
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class IAFRAMEWORK_API UIAActorComponent : public UActorComponent, public IIAOO
+UCLASS()
+class IAFRAMEWORK_API AIAActor : public AActor, public IIAOO
 {
 	GENERATED_BODY()
 
@@ -28,12 +27,24 @@ public:
 
 public:
 
-	UIAActorComponent();
+	AIAActor();
 
 	virtual void IARelease() override;
 
-protected:
+	//设置缓存名
+	void SetCacheName(FName InCacheName);
 	
+	//设置缓存名
+	FName GetCacheName() const;
+
+	//回收
+	void Recycle();
+
+protected:
+
 	virtual void BeginPlay() override;
 
+private:
+
+	FName CacheName;
 };

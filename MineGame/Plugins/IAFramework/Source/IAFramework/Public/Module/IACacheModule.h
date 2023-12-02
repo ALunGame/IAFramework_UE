@@ -27,7 +27,7 @@ public:
 	//实例化Object
 	UIAObject* CreateObject(const FName ObjectName);
 	//回收Object
-	void RecycleObject(AIAActor* InObject);
+	void RecycleObject(UIAObject* InObject);
 
 	//实例化Widget
 	UIAUserWidget* CreateWidget(const FName WidgetName);

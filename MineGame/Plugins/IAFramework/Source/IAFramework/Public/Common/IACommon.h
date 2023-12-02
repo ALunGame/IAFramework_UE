@@ -12,6 +12,7 @@ class AIADriver;
 class UIATimerModule;
 class UIAAssetModule;
 class UIACacheModule;
+class UIAUIModule;
 
 namespace IA
 {
@@ -138,6 +139,8 @@ private:
 	UIAAssetModule* AssetModule;
 	
 	UIACacheModule* CacheModule;
+
+	UIAUIModule* UIModule;
 	
 	APlayerController* PlayerController;
 	
@@ -160,6 +163,10 @@ public:
 	void SetCacheModule(UIACacheModule* InCacheModule);
 
 	UIACacheModule* GetCacheModule() const;
+
+	void SetUIModule(UIAUIModule* InUIModule);
+
+	UIAUIModule* GetUIModule() const;
 	
 	void InitController(APlayerController* InController);
 

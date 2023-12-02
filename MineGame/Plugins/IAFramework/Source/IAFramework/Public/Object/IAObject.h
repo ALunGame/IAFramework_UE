@@ -19,4 +19,17 @@ public:
 	
 	//重写释放函数
 	virtual void IARelease() override;
+	
+	//设置缓存名
+	void SetCacheName(FName InCacheName);
+	
+	//设置缓存名
+	FName GetCacheName() const;
+
+	//回收
+	void Recycle();
+
+private:
+
+	FName CacheName;
 };
