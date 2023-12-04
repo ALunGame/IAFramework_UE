@@ -38,7 +38,7 @@ public: \
 
 #define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetModule_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UIAAssetModule(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API UIAAssetModule(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UIAAssetModule) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UIAAssetModule); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UIAAssetModule); \
@@ -51,8 +51,6 @@ public: \
 
 
 #define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetModule_h_19_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UIAAssetModule(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UIAAssetModule(UIAAssetModule&&); \

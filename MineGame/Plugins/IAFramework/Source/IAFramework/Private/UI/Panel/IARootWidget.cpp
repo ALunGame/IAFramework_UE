@@ -25,14 +25,11 @@ bool UIARootWidget::Initialize()
 	NormalLucency = FLinearColor(1.f, 1.f, 1.f, 0.f);
 	TranslucenceLucency = FLinearColor(0.f, 0.f, 0.f, 0.6f);
 	ImPenetrableLucency = FLinearColor(0.f, 0.f, 0.f, 0.3f);
+
+	return true;
 }
 
-void UIARootWidget::OnEnable()
-{
-	//TODO : 注入
-}
-
-UCanvasPanel* UIARootWidget::GetRootCanvas()
+UCanvasPanel* UIARootWidget::GetRootCanvas() const
 {
 	return RootCanvas;
 }
@@ -48,12 +45,12 @@ UCanvasPanel* UIARootWidget::GetLayerCanvas(EUILayer Layer)
 	return *LayerCanvas.Find(Layer);
 }
 
-UImage* UIARootWidget::GetMask()
+UImage* UIARootWidget::GetMask() const
 {
 	return MaskImage;
 }
 
-void UIARootWidget::SetMask(EUIMaskType MaskType)
+void UIARootWidget::SetMask(EUIMaskType MaskType) const
 {
 	switch (MaskType)
 	{

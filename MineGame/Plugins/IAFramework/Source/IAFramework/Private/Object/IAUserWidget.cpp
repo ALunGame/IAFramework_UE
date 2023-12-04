@@ -4,9 +4,9 @@
 
 #include "Module/IACacheModule.h"
 
-void UIAUserWidget::IARelease()
+void UIAUserWidget::IADestroy()
 {
-	IIAOO::IARelease();
+	IIAOO::IADestroy();
 
 	//再检查一次从父类移除
 	RemoveFromParent();
@@ -28,5 +28,5 @@ FName UIAUserWidget::GetCacheName() const
 
 void UIAUserWidget::Recycle()
 {
-	UIACommon::Get()->GetCacheModule()->RecycleWidget(this);
+	UIACommon::Get()->GetCacheModule()->RecycleWidget(MakeShareable(this));
 }

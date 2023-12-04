@@ -16,7 +16,7 @@ void UIAUIModule::ModuleInit()
 	Super::ModuleInit();
 
 	//创建UI根
-	RootWidget = CreateWidget<UIARootWidget>(GetWorld(), UIRootWidgetClass);
+	RootWidget = MakeShareable(CreateWidget<UIARootWidget>(GetWorld(), UIRootWidgetClass));
 }
 
 void UIAUIModule::ShowPanel(FName PanelName)
@@ -78,6 +78,11 @@ void UIAUIModule::HideAllPanels()
 	ActivePanels.Empty();
 }
 
+TSharedPtr<UIARootWidget> UIAUIModule::GeRootWidget()
+{
+	return RootWidget;
+}
+
 UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FName PanelName)
 {
 	if (ActivePanels.Contains(PanelName))
@@ -86,7 +91,7 @@ UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FName PanelName)
 	if (HidePanels.Contains(PanelName))
 		return *HidePanels.Find(PanelName);
 
-	UIAPanelWidget* NewPanel = Cast<UIAPanelWidget>(UIACommon::Get()->GetCacheModule()->CreateWidget(PanelName));
+	UIAPanelWidget* NewPanel = Cast<UIAPanelWidget>(UIACommon::Get()->GetCacheModule()->GetWidget(PanelName).Get());
 	
 	//添加UI面板到父控件
 	UCanvasPanelSlot* PanelSlot = RootWidget->GetLayerCanvas(NewPanel->UIProperty.UILayer)->AddChildToCanvas(NewPanel);

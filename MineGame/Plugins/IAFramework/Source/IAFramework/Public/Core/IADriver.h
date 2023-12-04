@@ -35,28 +35,11 @@ public:
 
 	//第一帧调用BeginPlay()，其他帧调用Tick
 	virtual void Tick(float DeltaTime) override;
-
-	//提供给资源们进行注册
-	bool RegisterToModule(IIAOO* ObjectInst);
 	
 #if WITH_EDITOR
 	//属性修改方法
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif
-
-	/*
-	 * 执行模组反射方法
-	 */
-	void ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param);
-
-	/*
-	 * 执行对象反射方法
-	 */
-	void ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param);
-
-	//注册执行方法
-	template<typename RetType, typename... VarTypes>
-	IAFunHandle RegisterFunPort(EGameModule ModuleType, FName CallName, TFunction<RetType(VarTypes...)> InsFun);
 
 protected:
 	//是否已经运行BeginPlay函数
@@ -71,9 +54,3 @@ protected:
 	void RegisterGamePlay();
 
 };
-
-template <typename RetType, typename ... VarTypes>
-IAFunHandle AIADriver::RegisterFunPort(EGameModule ModuleType, FName CallName, TFunction<RetType(VarTypes...)> InsFun)
-{
-	return Center->RegisterFunPort<RetType, VarTypes...>(ModuleType, CallName, InsFun);
-}

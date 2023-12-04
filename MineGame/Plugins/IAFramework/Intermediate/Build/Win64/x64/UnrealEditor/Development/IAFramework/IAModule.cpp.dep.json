@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\private\\module\\iamodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gitproject\\iaframework_ue\\minegame\\intermediate\\build\\win64\\x64\\minegameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iaframework\\definitions.iaframework.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\module\\iamodule.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\common\\iacommon.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\common\\iadefine.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\common\\iatypes.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iatypes.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iadefine.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\game\\iagamecommon.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\game\\iagametypes.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iagametypes.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iagamecommon.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iacommon.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iamodule.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

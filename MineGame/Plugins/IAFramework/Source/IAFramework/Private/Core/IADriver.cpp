@@ -26,31 +26,22 @@ void AIADriver::PostInitializeComponents()
 	Super::PostInitializeComponents();
 	//设置到全局方法中
 	UIACommon::Get()->SetDriver(this);
-	//加载模组
-	Center->LoadAllModules(Center);
-	//收集模组
-	Center->GatherAllModules();
 	//创建
-	Center->Create(Center);
+    Center->Create();
+	//加载模组
+	Center->LoadAllModules();
 }
 
 void AIADriver::BeginPlay()
 {
 	Super::BeginPlay();
-
-
+	
 	//迭代调用Init函数
-	Center->ModuleInit(Center);
+	Center->ModuleInit();
 }
 
 void AIADriver::RegisterGamePlay()
 {
-	//获取GameInstance
-	UGameInstance* GameInstance = UGameplayStatics::GetGameInstance(GetWorld());
-	//如果存在并且继承自IDDOO,就注册进Center,类名和对象名都是GameInstance
-	if (GameInstance && Cast<IIAOO>(GameInstance))
-		Cast<IIAOO>(GameInstance)->RegisterToModule(EGameModule::Center, "GameInstacne", "GameInstacne");
-
 	//获取Controller并且注册到DDCommon
 	APlayerController* PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	//注册到Common
@@ -67,36 +58,16 @@ void AIADriver::Tick(float DeltaTime)
 	if (!IsBeginPlay)
 	{
 		//迭代调用Begin函数
-		Center->ModuleBeginPlay(Center);
+		Center->ModuleBeginPlay();
 		//只执行第一帧
 		IsBeginPlay = true;
 	}
 	else
 		//迭代调用Tick函数
-		Center->ModuleTick(Center, DeltaTime);
-}
-
-bool AIADriver::RegisterToModule(IIAOO* ObjectInst)
-{
-	return Center->RegisterToModule(ObjectInst);
+		Center->ModuleTick(DeltaTime);
 }
 
 void AIADriver::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
-
-	//判断变更属性
-	// if (PropertyChangedEvent.Property && PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(AIADriver, ModuleType))
-	// 	Center->IterChangeModuleType(Center, ModuleType);
 }
-
-void AIADriver::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
-{
-	Center->ExecuteFunction(Agreement, Param);
-}
-
-void AIADriver::ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param)
-{
-	Center->ExecuteFunction(Agreement, Param);
-}
-

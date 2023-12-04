@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "IAFramework/Public/Object/UI/IAUserWidget.h"
+#include "IAFramework/Public/Object/IAUserWidget.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeIAUserWidget() {}
 // Cross Module References
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeIAUserWidget() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAUserWidget_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "Object/UI/IAUserWidget.h" },
-		{ "ModuleRelativePath", "Public/Object/UI/IAUserWidget.h" },
+		{ "IncludePath", "Object/IAUserWidget.h" },
+		{ "ModuleRelativePath", "Public/Object/IAUserWidget.h" },
 	};
 #endif
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UIAUserWidget_Statics::InterfaceParams[] = {
@@ -80,15 +80,15 @@ void EmptyLinkFunctionForGeneratedCodeIAUserWidget() {}
 	UIAUserWidget::UIAUserWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UIAUserWidget);
 	UIAUserWidget::~UIAUserWidget() {}
-	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_UI_IAUserWidget_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_IAUserWidget_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_UI_IAUserWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAUserWidget, UIAUserWidget::StaticClass, TEXT("UIAUserWidget"), &Z_Registration_Info_UClass_UIAUserWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUserWidget), 2207663110U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_IAUserWidget_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UIAUserWidget, UIAUserWidget::StaticClass, TEXT("UIAUserWidget"), &Z_Registration_Info_UClass_UIAUserWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUserWidget), 995067654U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_UI_IAUserWidget_h_2374724550(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_UI_IAUserWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_UI_IAUserWidget_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_IAUserWidget_h_1652503436(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_IAUserWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Object_IAUserWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

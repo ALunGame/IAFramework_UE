@@ -13,8 +13,8 @@ void EmptyLinkFunctionForGeneratedCodeIAAssetMapping() {}
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIAAssetMapping();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIAAssetMapping_NoRegister();
-	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FAssetClass();
-	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FAssetObject();
+	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FClassAsset();
+	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FObjectAsset();
 	UPackage* Z_Construct_UPackage__Script_IAFramework();
 // End Cross Module References
 	void UIAAssetMapping::StaticRegisterNativesUIAAssetMapping()
@@ -57,22 +57,22 @@ void EmptyLinkFunctionForGeneratedCodeIAAssetMapping() {}
 		{ "ToolTip", "\xe9\x80\x9a\xe7\x94\xa8\xe7\x9a\x84\xe8\xb5\x84\xe6\xba\x90\xe6\x98\xa0\xe5\xb0\x84" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_Inner = { "ObjectData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FAssetObject, METADATA_PARAMS(nullptr, 0) }; // 2326590472
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_Inner = { "ObjectData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FObjectAsset, METADATA_PARAMS(nullptr, 0) }; // 1274688051
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_MetaData[] = {
 		{ "Category", "IAAssetMapping" },
 		{ "ModuleRelativePath", "Public/Asset/DataAsset/IAAssetMapping.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData = { "ObjectData", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAAssetMapping, ObjectData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_MetaData)) }; // 2326590472
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_Inner = { "ClassData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FAssetClass, METADATA_PARAMS(nullptr, 0) }; // 3944850339
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData = { "ObjectData", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAAssetMapping, ObjectData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_MetaData)) }; // 1274688051
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_Inner = { "ClassData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FClassAsset, METADATA_PARAMS(nullptr, 0) }; // 3651871645
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_MetaData[] = {
 		{ "Category", "IAAssetMapping" },
 		{ "ModuleRelativePath", "Public/Asset/DataAsset/IAAssetMapping.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData = { "ClassData", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAAssetMapping, ClassData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_MetaData)) }; // 3944850339
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData = { "ClassData", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAAssetMapping, ClassData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ClassData_MetaData)) }; // 3651871645
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UIAAssetMapping_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIAAssetMapping_Statics::NewProp_ObjectData,
@@ -117,9 +117,9 @@ void EmptyLinkFunctionForGeneratedCodeIAAssetMapping() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_DataAsset_IAAssetMapping_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAAssetMapping, UIAAssetMapping::StaticClass, TEXT("UIAAssetMapping"), &Z_Registration_Info_UClass_UIAAssetMapping, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAAssetMapping), 375216924U) },
+		{ Z_Construct_UClass_UIAAssetMapping, UIAAssetMapping::StaticClass, TEXT("UIAAssetMapping"), &Z_Registration_Info_UClass_UIAAssetMapping, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAAssetMapping), 3575331896U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_DataAsset_IAAssetMapping_h_3816678502(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_DataAsset_IAAssetMapping_h_2981403919(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_DataAsset_IAAssetMapping_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_DataAsset_IAAssetMapping_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

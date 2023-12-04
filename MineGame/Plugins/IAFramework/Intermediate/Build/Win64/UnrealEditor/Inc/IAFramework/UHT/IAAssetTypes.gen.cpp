@@ -16,9 +16,6 @@ void EmptyLinkFunctionForGeneratedCodeIAAssetTypes() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftObjectPath();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIAAssetTypes();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIAAssetTypes_NoRegister();
-	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FAssetClass();
-	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FAssetItem();
-	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FAssetObject();
 	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FClassAsset();
 	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FObjectAsset();
 	UPackage* Z_Construct_UPackage__Script_IAFramework();
@@ -84,186 +81,6 @@ void EmptyLinkFunctionForGeneratedCodeIAAssetTypes() {}
 	UIAAssetTypes::UIAAssetTypes(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UIAAssetTypes);
 	UIAAssetTypes::~UIAAssetTypes() {}
-	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AssetItem;
-class UScriptStruct* FAssetItem::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_AssetItem.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_AssetItem.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FAssetItem, (UObject*)Z_Construct_UPackage__Script_IAFramework(), TEXT("AssetItem"));
-	}
-	return Z_Registration_Info_UScriptStruct_AssetItem.OuterSingleton;
-}
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FAssetItem>()
-{
-	return FAssetItem::StaticStruct();
-}
-	struct Z_Construct_UScriptStruct_FAssetItem_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ObjectName_MetaData[];
-#endif
-		static const UECodeGen_Private::FNamePropertyParams NewProp_ObjectName;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UECodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAssetItem_Statics::Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Asset/IAAssetTypes.h" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FAssetItem_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAssetItem>();
-	}
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAssetItem_Statics::NewProp_ObjectName_MetaData[] = {
-		{ "Category", "AssetItem" },
-		{ "Comment", "//\xe8\xb5\x84\xe6\xba\x90\xe5\x94\xaf\xe4\xb8\x80\xe5\x90\x8d\n" },
-		{ "ModuleRelativePath", "Public/Asset/IAAssetTypes.h" },
-		{ "ToolTip", "\xe8\xb5\x84\xe6\xba\x90\xe5\x94\xaf\xe4\xb8\x80\xe5\x90\x8d" },
-	};
-#endif
-	const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FAssetItem_Statics::NewProp_ObjectName = { "ObjectName", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FAssetItem, ObjectName), METADATA_PARAMS(Z_Construct_UScriptStruct_FAssetItem_Statics::NewProp_ObjectName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAssetItem_Statics::NewProp_ObjectName_MetaData)) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FAssetItem_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAssetItem_Statics::NewProp_ObjectName,
-	};
-	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAssetItem_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
-		nullptr,
-		&NewStructOps,
-		"AssetItem",
-		sizeof(FAssetItem),
-		alignof(FAssetItem),
-		Z_Construct_UScriptStruct_FAssetItem_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAssetItem_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FAssetItem_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAssetItem_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FAssetItem()
-	{
-		if (!Z_Registration_Info_UScriptStruct_AssetItem.InnerSingleton)
-		{
-			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_AssetItem.InnerSingleton, Z_Construct_UScriptStruct_FAssetItem_Statics::ReturnStructParams);
-		}
-		return Z_Registration_Info_UScriptStruct_AssetItem.InnerSingleton;
-	}
-
-static_assert(std::is_polymorphic<FAssetObject>() == std::is_polymorphic<FAssetItem>(), "USTRUCT FAssetObject cannot be polymorphic unless super FAssetItem is polymorphic");
-
-	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AssetObject;
-class UScriptStruct* FAssetObject::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_AssetObject.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_AssetObject.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FAssetObject, (UObject*)Z_Construct_UPackage__Script_IAFramework(), TEXT("AssetObject"));
-	}
-	return Z_Registration_Info_UScriptStruct_AssetObject.OuterSingleton;
-}
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FAssetObject>()
-{
-	return FAssetObject::StaticStruct();
-}
-	struct Z_Construct_UScriptStruct_FAssetObject_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-		static const UECodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAssetObject_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "//\xe8\xb5\x84\xe6\xba\x90\n" },
-		{ "ModuleRelativePath", "Public/Asset/IAAssetTypes.h" },
-		{ "ToolTip", "\xe8\xb5\x84\xe6\xba\x90" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FAssetObject_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAssetObject>();
-	}
-	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAssetObject_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
-		Z_Construct_UScriptStruct_FAssetItem,
-		&NewStructOps,
-		"AssetObject",
-		sizeof(FAssetObject),
-		alignof(FAssetObject),
-		nullptr,
-		0,
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FAssetObject_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAssetObject_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FAssetObject()
-	{
-		if (!Z_Registration_Info_UScriptStruct_AssetObject.InnerSingleton)
-		{
-			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_AssetObject.InnerSingleton, Z_Construct_UScriptStruct_FAssetObject_Statics::ReturnStructParams);
-		}
-		return Z_Registration_Info_UScriptStruct_AssetObject.InnerSingleton;
-	}
-
-static_assert(std::is_polymorphic<FAssetClass>() == std::is_polymorphic<FAssetItem>(), "USTRUCT FAssetClass cannot be polymorphic unless super FAssetItem is polymorphic");
-
-	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AssetClass;
-class UScriptStruct* FAssetClass::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_AssetClass.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_AssetClass.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FAssetClass, (UObject*)Z_Construct_UPackage__Script_IAFramework(), TEXT("AssetClass"));
-	}
-	return Z_Registration_Info_UScriptStruct_AssetClass.OuterSingleton;
-}
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FAssetClass>()
-{
-	return FAssetClass::StaticStruct();
-}
-	struct Z_Construct_UScriptStruct_FAssetClass_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-		static const UECodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAssetClass_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "//\xe7\xb1\xbb\xe8\xb5\x84\xe6\xba\x90\n" },
-		{ "ModuleRelativePath", "Public/Asset/IAAssetTypes.h" },
-		{ "ToolTip", "\xe7\xb1\xbb\xe8\xb5\x84\xe6\xba\x90" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FAssetClass_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAssetClass>();
-	}
-	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAssetClass_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
-		Z_Construct_UScriptStruct_FAssetItem,
-		&NewStructOps,
-		"AssetClass",
-		sizeof(FAssetClass),
-		alignof(FAssetClass),
-		nullptr,
-		0,
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FAssetClass_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAssetClass_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FAssetClass()
-	{
-		if (!Z_Registration_Info_UScriptStruct_AssetClass.InnerSingleton)
-		{
-			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_AssetClass.InnerSingleton, Z_Construct_UScriptStruct_FAssetClass_Statics::ReturnStructParams);
-		}
-		return Z_Registration_Info_UScriptStruct_AssetClass.InnerSingleton;
-	}
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ObjectAsset;
 class UScriptStruct* FObjectAsset::StaticStruct()
 {
@@ -387,9 +204,9 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FClassAsset>()
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_AssetPath;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Object_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Class_MetaData[];
 #endif
-		static const UECodeGen_Private::FClassPropertyParams NewProp_Object;
+		static const UECodeGen_Private::FClassPropertyParams NewProp_Class;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -421,17 +238,17 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FClassAsset>()
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_AssetPath = { "AssetPath", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FClassAsset, AssetPath), Z_Construct_UScriptStruct_FSoftClassPath, METADATA_PARAMS(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_AssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_AssetPath_MetaData)) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Object_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Class_MetaData[] = {
 		{ "Comment", "//\xe5\x8a\xa0\xe8\xbd\xbd\xe5\x87\xba\xe6\x9d\xa5\xe7\x9a\x84\xe5\xaf\xb9\xe8\xb1\xa1\n" },
 		{ "ModuleRelativePath", "Public/Asset/IAAssetTypes.h" },
 		{ "ToolTip", "\xe5\x8a\xa0\xe8\xbd\xbd\xe5\x87\xba\xe6\x9d\xa5\xe7\x9a\x84\xe5\xaf\xb9\xe8\xb1\xa1" },
 	};
 #endif
-	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Object = { "Object", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FClassAsset, Object), Z_Construct_UClass_UClass, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Object_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Object_MetaData)) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Class = { "Class", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FClassAsset, Class), Z_Construct_UClass_UClass, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Class_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Class_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FClassAsset_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Name,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_AssetPath,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Object,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FClassAsset_Statics::NewProp_Class,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FClassAsset_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
@@ -460,16 +277,13 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FClassAsset>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ScriptStructInfo[] = {
-		{ FAssetItem::StaticStruct, Z_Construct_UScriptStruct_FAssetItem_Statics::NewStructOps, TEXT("AssetItem"), &Z_Registration_Info_UScriptStruct_AssetItem, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAssetItem), 1505083682U) },
-		{ FAssetObject::StaticStruct, Z_Construct_UScriptStruct_FAssetObject_Statics::NewStructOps, TEXT("AssetObject"), &Z_Registration_Info_UScriptStruct_AssetObject, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAssetObject), 2326590472U) },
-		{ FAssetClass::StaticStruct, Z_Construct_UScriptStruct_FAssetClass_Statics::NewStructOps, TEXT("AssetClass"), &Z_Registration_Info_UScriptStruct_AssetClass, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAssetClass), 3944850339U) },
 		{ FObjectAsset::StaticStruct, Z_Construct_UScriptStruct_FObjectAsset_Statics::NewStructOps, TEXT("ObjectAsset"), &Z_Registration_Info_UScriptStruct_ObjectAsset, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FObjectAsset), 1274688051U) },
-		{ FClassAsset::StaticStruct, Z_Construct_UScriptStruct_FClassAsset_Statics::NewStructOps, TEXT("ClassAsset"), &Z_Registration_Info_UScriptStruct_ClassAsset, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FClassAsset), 435185841U) },
+		{ FClassAsset::StaticStruct, Z_Construct_UScriptStruct_FClassAsset_Statics::NewStructOps, TEXT("ClassAsset"), &Z_Registration_Info_UScriptStruct_ClassAsset, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FClassAsset), 3651871645U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UIAAssetTypes, UIAAssetTypes::StaticClass, TEXT("UIAAssetTypes"), &Z_Registration_Info_UClass_UIAAssetTypes, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAAssetTypes), 1743578866U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_2818712087(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_3319732691(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_Statics::ScriptStructInfo),
 		nullptr, 0);

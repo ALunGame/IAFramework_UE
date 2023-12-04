@@ -7,20 +7,12 @@
 
 AIAActor::AIAActor()
 {
-	PrimaryActorTick.bCanEverTick = false;
+	//PrimaryActorTick.bCanEverTick = false;
 }
 
-void AIAActor::BeginPlay()
+void AIAActor::IADestroy()
 {
-	Super::BeginPlay();
-
-	//自动注册
-	RegisterToModule(ModuleType,ObjectName, ClassName);
-}
-
-void AIAActor::IARelease()
-{
-	IIAOO::IARelease();
+	IIAOO::IADestroy();
 
 	GetIAWorld()->DestroyActor(this);
 }

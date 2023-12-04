@@ -21,15 +21,13 @@ public:
 
 	virtual bool Initialize() override;
 
-	virtual void OnEnable() override;
-
-	UCanvasPanel* GetRootCanvas();
+	UCanvasPanel* GetRootCanvas() const;
 	
 	UCanvasPanel* GetLayerCanvas(EUILayer Layer);
 	
-	UImage* GetMask();
+	UImage* GetMask() const;
 
-	void SetMask(EUIMaskType MaskType);
+	void SetMask(EUIMaskType MaskType) const;
 
 private:
 

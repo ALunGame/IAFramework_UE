@@ -18,7 +18,7 @@ class IAFRAMEWORK_API UIAObject : public UObject, public IIAOO
 public:
 	
 	//重写释放函数
-	virtual void IARelease() override;
+	virtual void IADestroy() override;
 	
 	//设置缓存名
 	void SetCacheName(FName InCacheName);

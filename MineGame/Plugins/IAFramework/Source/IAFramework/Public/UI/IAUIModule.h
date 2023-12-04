@@ -8,6 +8,7 @@
 #include "IAUIModule.generated.h"
 
 
+class UCanvasPanel;
 class UIAPanelWidget;
 class UIARootWidget;
 class UImage;
@@ -32,11 +33,12 @@ public:
 	void HidePanel(FName PanelName);
 
 	void HideAllPanels();
+	
+	TSharedPtr<UIARootWidget> GeRootWidget();
 
 private:
 	
-	UPROPERTY()
-	UIARootWidget* RootWidget;
+	TSharedPtr<UIARootWidget> RootWidget;
 	
 	//保存Canvas控件
 	UPROPERTY()

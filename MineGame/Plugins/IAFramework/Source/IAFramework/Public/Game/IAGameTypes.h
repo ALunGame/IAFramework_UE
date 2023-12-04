@@ -23,6 +23,7 @@ enum class EGameModule : uint8
 	HUD			UMETA(DisplayName = "UI模组"),				//UI模组
 	Timer		UMETA(DisplayName = "计时器模组"),			//计时器模组
 	Player		UMETA(DisplayName = "玩家模组"),				//玩家模组
+	Cache		UMETA(DisplayName = "缓存模组"),				//缓存模组
 };
 
 /************************************************************************/

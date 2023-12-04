@@ -18,35 +18,17 @@ class IAFRAMEWORK_API UIACenterModule : public UIAModule
 
 public:
 	//加载保存模组
-	void LoadAllModules(UIAModule* Module);
-	//递归创建模块
-	void Create(UIAModule* Module);
-	//递归初始化
-	void ModuleInit(UIAModule* Module);
-	//递归BeginPlay
-	void ModuleBeginPlay(UIAModule* Module);
-	//递归Tick
-	void ModuleTick(UIAModule* Module, float DeltaSeconds);
-	//提取所有模组到模组数组
-	void GatherAllModules();
-	//获得所有模组
-	void GatherModule(UIAModule* Module, TArray<UIAModule*>& GatherGroup);
-	//注册对象到模组
-	bool RegisterToModule(IIAOO* ObejctInst);
+	void LoadAllModules();
 
-	/*
-	* 执行模组反射方法
-	*/
-	void ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param);
+	virtual void ModuleInit() override;
 
-	/*
-	 * 执行对象反射方法
-	 */
-	void ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param);
+	virtual void ModuleBeginPlay() override;
 
-	//注册执行方法
-	template<typename RetType, typename... VarTypes>
-	IAFunHandle RegisterFunPort(EGameModule ModuleType, FName CallName, TFunction<RetType(VarTypes...)> InsFun);
+	virtual void ModuleTick(float DeltaSeconds) override;
+
+	virtual void ModuleClear() override;
+
+	UIAModule* GetModule(EGameModule InModuleType);
 	
 protected:
 
@@ -54,10 +36,3 @@ protected:
 	TMap<EGameModule,UIAModule*> ModuleGroup;
 };
 
-template <typename RetType, typename ... VarTypes>
-IAFunHandle UIACenterModule::RegisterFunPort(EGameModule ModuleType, FName CallName, TFunction<RetType(VarTypes...)> InsFun)
-{
-	if (ModuleGroup[ModuleType])
-		return ModuleGroup[ModuleType]->RegisterFunPort<RetType, VarTypes...>(CallName, InsFun);
-	return IAFunHandle();
-}

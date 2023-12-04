@@ -3,85 +3,68 @@
 
 #include "Module/IACenterModule.h"
 
-void UIACenterModule::LoadAllModules(UIAModule* Module)
+void UIACenterModule::LoadAllModules()
 {
-	for (int i = 0; i < Module->GetAttachChildren().Num(); ++i)
+	for (int i = 0; i < this->GetAttachChildren().Num(); ++i)
 	{
-		UIAModule* ChildModule = Cast<UIAModule>(Module->GetAttachChildren()[i]);
+		UIAModule* ChildModule = Cast<UIAModule>(this->GetAttachChildren()[i]);
+		ChildModule->Create();
+		
 		if (ChildModule)
 		{
 			//添加这个对象到这个Module的ChildModule
-			Module->ChildrenModule.Push(ChildModule);
+			ModuleGroup.Add(ChildModule->ModuleType,ChildModule);
 			//设置全局模组
 			if (ChildModule->ModuleType == EGameModule::Timer)
 			{
 				UIACommon::Get()->SetTimerModule((UIATimerModule*)ChildModule);
 			}
-			LoadAllModules(ChildModule);
 		}
 	}
 }
 
-void UIACenterModule::Create(UIAModule* Module)
+void UIACenterModule::ModuleInit()
 {
-	Module->Create();
-	for (int i = 0; i < Module->ChildrenModule.Num(); ++i)
-		Create(Module->ChildrenModule[i]);
-}
-
-void UIACenterModule::ModuleInit(UIAModule* Module)
-{
-	Module->ModuleInit();
-	for (int i = 0; i < Module->ChildrenModule.Num(); ++i)
-		ModuleInit(Module->ChildrenModule[i]);
-}
-
-void UIACenterModule::ModuleBeginPlay(UIAModule* Module)
-{
-	Module->ModuleBeginPlay();
-	for (int i = 0; i < Module->ChildrenModule.Num(); ++i)
-		ModuleBeginPlay(Module->ChildrenModule[i]);
-}
-
-void UIACenterModule::ModuleTick(UIAModule* Module, float DeltaSeconds)
-{
-	Module->ModuleTick(DeltaSeconds);
-	for (int i = 0; i < Module->ChildrenModule.Num(); ++i)
-		ModuleTick(Module->ChildrenModule[i], DeltaSeconds);
-}
-
-void UIACenterModule::GatherAllModules()
-{
-	//先获取所有的模组到GatherGroup
-	TArray<UIAModule*> GatherGroup;
-	GatherModule(this, GatherGroup);
-	
-	//按模组ID填充模组到ModuleGroup
-	for (int i = 0; i < GatherGroup.Num(); ++i)
-		ModuleGroup.Add(GatherGroup[i]->ModuleType,GatherGroup[i]);
-}
-
-void UIACenterModule::GatherModule(UIAModule* Module, TArray<UIAModule*>& GatherGroup)
-{
-	GatherGroup.Push(Module);
-	for (int i = 0; i < Module->ChildrenModule.Num(); ++i)
-		GatherModule(Module->ChildrenModule[i], GatherGroup);
-}
-
-bool UIACenterModule::RegisterToModule(IIAOO* ObejctInst)
-{
-	if (!ModuleGroup.Contains(ObejctInst->GetModuleType()))
+	Super::ModuleInit();
+	//初始化
+	for (const auto Element : ModuleGroup)
 	{
-		return false;
+		Element.Value->ModuleInit();
 	}
-	ModuleGroup[ObejctInst->GetModuleType()]->RegisterObject(ObejctInst);
-	return true;
 }
 
-void UIACenterModule::ExecuteFunction(IAModuleAgreement Agreement, IAParam* Param)
+void UIACenterModule::ModuleBeginPlay()
 {
+	Super::ModuleBeginPlay();
+	for (const auto Element : ModuleGroup)
+	{
+		Element.Value->ModuleBeginPlay();
+	}
 }
 
-void UIACenterModule::ExecuteFunction(IAObjectAgreement Agreement, IAParam* Param)
+void UIACenterModule::ModuleTick(float DeltaSeconds)
 {
+	Super::ModuleTick(DeltaSeconds);
+	for (const auto Element : ModuleGroup)
+	{
+		Element.Value->ModuleTick(DeltaSeconds);
+	}
+}
+
+void UIACenterModule::ModuleClear()
+{
+	Super::ModuleClear();
+	for (const auto Element : ModuleGroup)
+	{
+		Element.Value->ModuleClear();
+	}
+}
+
+UIAModule* UIACenterModule::GetModule(EGameModule InModuleType)
+{
+	if (!ModuleGroup.Contains(InModuleType))
+	{
+		return nullptr;
+	}
+	return ModuleGroup[InModuleType];
 }

@@ -17,7 +17,7 @@ class IAFRAMEWORK_API UIAUserWidget : public UUserWidget, public IIAOO
 
 public:
 
-	virtual void IARelease() override;
+	virtual void IADestroy() override;
 
 	//设置缓存名
 	void SetCacheName(FName InCacheName);

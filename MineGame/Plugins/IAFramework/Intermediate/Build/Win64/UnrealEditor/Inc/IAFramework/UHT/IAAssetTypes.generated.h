@@ -92,36 +92,13 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> IAFRAMEWORK_API UClass* StaticClass<class UIAAssetTypes>();
 
 #define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_23_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FAssetItem_Statics; \
-	IAFRAMEWORK_API static class UScriptStruct* StaticStruct();
-
-
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<struct FAssetItem>();
-
-#define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_37_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FAssetObject_Statics; \
-	IAFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
-	typedef FAssetItem Super;
-
-
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<struct FAssetObject>();
-
-#define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_49_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FAssetClass_Statics; \
-	IAFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
-	typedef FAssetItem Super;
-
-
-template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<struct FAssetClass>();
-
-#define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_60_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FObjectAsset_Statics; \
 	IAFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<struct FObjectAsset>();
 
-#define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_80_GENERATED_BODY \
+#define FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Asset_IAAssetTypes_h_43_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FClassAsset_Statics; \
 	IAFRAMEWORK_API static class UScriptStruct* StaticStruct();
 

@@ -5,9 +5,9 @@
 
 #include "Module/IACacheModule.h"
 
-void UIAObject::IARelease()
+void UIAObject::IADestroy()
 {
-	IIAOO::IARelease();
+	IIAOO::IADestroy();
 
 	//从Root移除
 	RemoveFromRoot();
