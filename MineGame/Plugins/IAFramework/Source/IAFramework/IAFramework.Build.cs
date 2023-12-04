@@ -27,6 +27,11 @@ public class IAFramework : ModuleRules
 			{
 				"Core",
 				// ... add other public dependencies that you statically link with here ...
+				"Slate",
+				"SlateCore",
+				"UMG",
+				"AIModule",
+				"GameplayTasks",
 			}
 			);
 			
@@ -36,11 +41,7 @@ public class IAFramework : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"Slate",
-				"SlateCore",
-				"UMG",
-				"AIModule",
-				"GameplayTasks",
+
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -42,10 +42,15 @@ void EmptyLinkFunctionForGeneratedCodeIAGameTypes() {}
 		{ "EGameModule::HUD", (int64)EGameModule::HUD },
 		{ "EGameModule::Timer", (int64)EGameModule::Timer },
 		{ "EGameModule::Player", (int64)EGameModule::Player },
+		{ "EGameModule::Cache", (int64)EGameModule::Cache },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_IAFramework_EGameModule_Statics::Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Cache.Comment", "//\xe7\x8e\xa9\xe5\xae\xb6\xe6\xa8\xa1\xe7\xbb\x84\n" },
+		{ "Cache.DisplayName", "\xe7\xbc\x93\xe5\xad\x98\xe6\xa8\xa1\xe7\xbb\x84" },
+		{ "Cache.Name", "EGameModule::Cache" },
+		{ "Cache.ToolTip", "\xe7\x8e\xa9\xe5\xae\xb6\xe6\xa8\xa1\xe7\xbb\x84" },
 		{ "Center.DisplayName", "\xe4\xb8\xad\xe5\xa4\xae\xe6\xa8\xa1\xe7\xbb\x84" },
 		{ "Center.Name", "EGameModule::Center" },
 		{ "Comment", "/************************************************************************///\xe5\xbd\x93\xe5\x89\x8d\xe4\xb8\x8d\xe8\x83\xbd\xe6\x9c\x89\xe5\xa4\x9a\xe4\xb8\xaa\xe9\xa9\xb1\xe5\x8a\xa8\xe5\x99\xa8\n//\xe6\xa8\xa1\xe7\xbb\x84\xe7\xba\xa6\xe5\xae\x9a, \xe5\xa6\x82\xe6\x9e\x9c\xe8\xa6\x81\xe4\xbd\xbf\xe7\x94\xa8""DataDriven\xe6\x9c\xac\xe8\xba\xab\xe7\x9a\x84UI\xe6\xa1\x86\xe6\x9e\xb6, \xe8\xaf\xb7\xe4\xb8\x80\xe5\xae\x9a\xe8\xa6\x81\xe6\x8a\x8aHUD\xe6\xa8\xa1\xe7\xbb\x84\xe6\x94\xbe\xe5\x9c\xa8\xe7\xac\xac\xe4\xba\x8c\xe4\xbd\x8d, UIFrame\xe6\xa1\x86\xe6\x9e\xb6\xe7\xae\xa1\xe7\x90\x86\xe5\x99\xa8\xe5\xa7\x8b\xe7\xbb\x88\xe5\x9c\xa8HUD\xe6\xa8\xa1\xe7\xbb\x84\xe4\xb8\x8b\n" },
@@ -154,12 +159,12 @@ void EmptyLinkFunctionForGeneratedCodeIAGameTypes() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::EnumInfo[] = {
-		{ EGameModule_StaticEnum, TEXT("EGameModule"), &Z_Registration_Info_UEnum_EGameModule, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 769984659U) },
+		{ EGameModule_StaticEnum, TEXT("EGameModule"), &Z_Registration_Info_UEnum_EGameModule, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1632831013U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UIAGameTypes, UIAGameTypes::StaticClass, TEXT("UIAGameTypes"), &Z_Registration_Info_UClass_UIAGameTypes, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAGameTypes), 1750099574U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_445503218(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_1906692297(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Game_IAGameTypes_h_Statics::EnumInfo));

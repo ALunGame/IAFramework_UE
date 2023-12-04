@@ -22,6 +22,8 @@ public:
 
 public:
 
+	virtual bool Initialize() override;
+
 	//UI面板生命周期
 	virtual void Awake();		//初始化
 	virtual void Show();		//显示

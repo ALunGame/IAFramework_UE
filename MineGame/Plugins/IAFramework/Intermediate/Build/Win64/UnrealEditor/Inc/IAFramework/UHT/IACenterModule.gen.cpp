@@ -84,9 +84,9 @@ void EmptyLinkFunctionForGeneratedCodeIACenterModule() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IACenterModule_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIACenterModule, UIACenterModule::StaticClass, TEXT("UIACenterModule"), &Z_Registration_Info_UClass_UIACenterModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIACenterModule), 2375560576U) },
+		{ Z_Construct_UClass_UIACenterModule, UIACenterModule::StaticClass, TEXT("UIACenterModule"), &Z_Registration_Info_UClass_UIACenterModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIACenterModule), 4022209513U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IACenterModule_h_654018147(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IACenterModule_h_2613992649(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IACenterModule_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IACenterModule_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

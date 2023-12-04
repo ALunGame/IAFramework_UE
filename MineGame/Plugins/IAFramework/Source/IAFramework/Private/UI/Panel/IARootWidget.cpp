@@ -9,7 +9,7 @@
 
 bool UIARootWidget::Initialize()
 {
-	Super::Initialize();
+	if (!Super::Initialize()) return false;
 
 	//添加到视图
 	AddToViewport();

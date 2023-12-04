@@ -82,9 +82,9 @@ void EmptyLinkFunctionForGeneratedCodeIATimerModule() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IATimerModule_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIATimerModule, UIATimerModule::StaticClass, TEXT("UIATimerModule"), &Z_Registration_Info_UClass_UIATimerModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIATimerModule), 3858760519U) },
+		{ Z_Construct_UClass_UIATimerModule, UIATimerModule::StaticClass, TEXT("UIATimerModule"), &Z_Registration_Info_UClass_UIATimerModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIATimerModule), 2512365063U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IATimerModule_h_2488015853(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IATimerModule_h_2453283299(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IATimerModule_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Module_IATimerModule_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

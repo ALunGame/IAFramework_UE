@@ -29,6 +29,8 @@ public:
 
 	void SetMask(EUIMaskType MaskType) const;
 
+protected:
+
 private:
 
 	//根节点

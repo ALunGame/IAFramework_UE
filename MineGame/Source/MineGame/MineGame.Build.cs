@@ -14,7 +14,8 @@ public class MineGame : ModuleRules
 			"CoreUObject", 
 			"Engine", 
 			"InputCore",
-			"IAFramework"
+			"IAFramework",
+			"UMG"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
