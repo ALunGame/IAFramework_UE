@@ -15,8 +15,8 @@ bool UIARootWidget::Initialize()
 	AddToViewport();
 
 	//获取根节点
-	RootCanvas = Cast<UCanvasPanel>(GetRootWidget());
-	RootCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
+	//RootCanvas = Cast<UCanvasPanel>(GetRootWidget());
+	//RootCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
 
 	//生成遮罩
 	MaskImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "Common/IACommon.h"
+#include "Game/IAGameCommon.h"
 #include "IAModule.generated.h"
 
 

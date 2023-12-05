@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "IAUITypes.h"
+#include "Engine/DataTable.h"
 #include "Module/IAModule.h"
 #include "IAUIModule.generated.h"
 
 
+class UIAUIPanelConfig;
 class UCanvasPanel;
 class UIAPanelWidget;
 class UIARootWidget;
@@ -24,17 +26,27 @@ public:
 	UPROPERTY(EditAnywhere, Category = "IA")
 	TSubclassOf<UIARootWidget> UIRootWidgetClass;
 
+	UPROPERTY(EditAnywhere, Category = "IA")
+	UIAUIPanelConfig* UIPanelConfig;
+
 public:
 
 	virtual void ModuleInit() override;
 
-	void ShowPanel(FName PanelName);
+	void ShowPanel(EUIPanelType InPanelType);
 
-	void HidePanel(FName PanelName);
+	void HidePanel(EUIPanelType InPanelType);
 
 	void HideAllPanels();
 	
 	TSharedPtr<UIARootWidget> GeRootWidget();
+
+	FUIPanelConfig* GetUIPanelConfig(EUIPanelType InPanelType) const;
+
+#if WITH_EDITOR
+	//属性修改方法
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 
 private:
 	
@@ -42,9 +54,9 @@ private:
 	
 	//保存Canvas控件
 	UPROPERTY()
-	TMap<FName,UIAPanelWidget*> ActivePanels;
+	TMap<EUIPanelType,UIAPanelWidget*> ActivePanels;
 	UPROPERTY()
-	TMap<FName,UIAPanelWidget*> HidePanels;
+	TMap<EUIPanelType,UIAPanelWidget*> HidePanels;
 	
 	//界面栈
 	UPROPERTY()
@@ -52,7 +64,7 @@ private:
 
 private:
 
-	UIAPanelWidget* GetOrCreatePanel(FName PanelName);
+	UIAPanelWidget* GetOrCreatePanel(FUIPanelConfig* InPanelCfg);
 	
 	void DealShowPanel(UIAPanelWidget* Panel, EUIShowRule ShowRule);
 

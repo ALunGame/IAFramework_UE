@@ -6,8 +6,9 @@
 #include "Components/CanvasPanel.h"
 #include "Components/CanvasPanelSlot.h"
 #include "Components/Image.h"
-#include "Components/OverlaySlot.h"
+#include "Core/IADriver.h"
 #include "Module/IACacheModule.h"
+#include "UI/IAUIPanelConfig.h"
 #include "UI/Panel/IAPanelWidget.h"
 #include "UI/Panel/IARootWidget.h"
 
@@ -19,38 +20,44 @@ void UIAUIModule::ModuleInit()
 	RootWidget = MakeShareable(CreateWidget<UIARootWidget>(GetWorld(), UIRootWidgetClass));
 }
 
-void UIAUIModule::ShowPanel(FName PanelName)
+void UIAUIModule::ShowPanel(EUIPanelType InPanelType)
 {
-	UIAPanelWidget* Panel = GetOrCreatePanel(PanelName);
+	FUIPanelConfig* PanelCfg = GetUIPanelConfig(InPanelType);
+	if (!PanelCfg)
+	{
+		IA::Error() << "UI打开失败！！没有对应UI配置" << IA::GetEnumValueAsString(InPanelType) << IA::Endl();
+		return;
+	}
+	UIAPanelWidget* Panel = GetOrCreatePanel(PanelCfg);
 	if (!Panel)
 	{
-		IA::Error() << "UI打开失败！！没有对应UI" << PanelName << IA::Endl();
+		IA::Error() << "UI打开失败！！没有对应UI" << IA::GetEnumValueAsString(InPanelType) << IA::Endl();
 		return;
 	}
 
 	DealShowPanel(Panel,Panel->UIProperty.DefaultPanelShowRule);
 }
 
-void UIAUIModule::HidePanel(FName PanelName)
+void UIAUIModule::HidePanel(EUIPanelType InPanelType)
 {
-	if (!ActivePanels.Contains(PanelName))
+	if (!ActivePanels.Contains(InPanelType))
 	{
-		IA::Warning() << "UI隐藏失败！！该UI已经隐藏" << PanelName << IA::Endl();
+		IA::Warning() << "UI隐藏失败！！该UI已经隐藏" << IA::GetEnumValueAsString(InPanelType) << IA::Endl();
 		return;
 	}
-	ActivePanels.Remove(PanelName);
+	ActivePanels.Remove(InPanelType);
 
 	//数据
-	UIAPanelWidget* Panel = ActivePanels[PanelName];
-	ActivePanels.Remove(PanelName);
-	if (!HidePanels.Contains(PanelName))
-		HidePanels.Add(PanelName,Panel);
+	UIAPanelWidget* Panel = ActivePanels[InPanelType];
+	ActivePanels.Remove(InPanelType);
+	if (!HidePanels.Contains(InPanelType))
+		HidePanels.Add(InPanelType,Panel);
 
 	//执行隐藏
 	DealHidePanel(Panel);	
 	
 	//判断栈顶元素
-	if (PanelStack.Last()->UIProperty.UIName == PanelName)
+	if (PanelStack.Last()->PanelType == InPanelType)
 	{
 		//显示下一个
 		PanelStack.Remove(Panel);
@@ -83,15 +90,47 @@ TSharedPtr<UIARootWidget> UIAUIModule::GeRootWidget()
 	return RootWidget;
 }
 
-UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FName PanelName)
+FUIPanelConfig* UIAUIModule::GetUIPanelConfig(EUIPanelType InPanelType) const
 {
-	if (ActivePanels.Contains(PanelName))
-		return *ActivePanels.Find(PanelName);
-	
-	if (HidePanels.Contains(PanelName))
-		return *HidePanels.Find(PanelName);
+	if (!UIPanelConfig || !UIPanelConfig->PanelConfig.Contains(InPanelType))
+	{
+		return nullptr;
+	}
 
-	UIAPanelWidget* NewPanel = Cast<UIAPanelWidget>(UIACommon::Get()->GetCacheModule()->GetWidget(PanelName).Get());
+	return UIPanelConfig->PanelConfig.Find(InPanelType);
+}
+
+void UIAUIModule::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+	Super::PostEditChangeProperty(PropertyChangedEvent);
+
+	// if (PropertyChangedEvent.Property)
+	// {
+	// 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UIAUIModule, DataTable))
+	// 	{
+	// 	}
+	// }
+}
+
+UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FUIPanelConfig* InPanelCfg)
+{
+	if (ActivePanels.Contains(InPanelCfg->PanelType))
+		return *ActivePanels.Find(InPanelCfg->PanelType);
+	
+	if (HidePanels.Contains(InPanelCfg->PanelType))
+		return *HidePanels.Find(InPanelCfg->PanelType);
+
+	//加载资源
+	if (!InPanelCfg->Class)
+	{
+		InPanelCfg->Class = InPanelCfg->PanelClass.LoadSynchronous();
+		if (!InPanelCfg->Class)
+		{
+			IA::Error() << "UI加载失败！！" << IA::GetEnumValueAsString(InPanelCfg->PanelType) << IA::Endl();
+			return nullptr;
+		}
+	}
+	UIAPanelWidget* NewPanel = CreateWidget<UIAPanelWidget>(UIACommon::Get()->GetDriver()->GetWorld(), InPanelCfg->Class);
 	
 	//添加UI面板到父控件
 	UCanvasPanelSlot* PanelSlot = RootWidget->GetLayerCanvas(NewPanel->UIProperty.UILayer)->AddChildToCanvas(NewPanel);
@@ -109,16 +148,16 @@ void UIAUIModule::DealShowPanel(UIAPanelWidget* Panel, EUIShowRule ShowRule)
 	//移除冗余元素
 	if (PanelStack.Contains(Panel))
 		PanelStack.Remove(Panel);
-	if (HidePanels.Contains(Panel->UIProperty.UIName))
-		HidePanels.Remove(Panel->UIProperty.UIName);
+	if (HidePanels.Contains(Panel->PanelType))
+		HidePanels.Remove(Panel->PanelType);
 	
 	//隐藏其他
 	if (ShowRule == EUIShowRule::HideOther || ShowRule == EUIShowRule::HideOther_NoNeedBack)
 		HideAllPanels();
 
 	//设置数据
-	if (!ActivePanels.Contains(Panel->UIProperty.UIName))
-		ActivePanels.Add(Panel->UIProperty.UIName,Panel);
+	if (!ActivePanels.Contains(Panel->PanelType))
+		ActivePanels.Add(Panel->PanelType,Panel);
 
 	//入栈
 	if (ShowRule == EUIShowRule::Overlay || ShowRule == EUIShowRule::HideOther)
@@ -137,11 +176,11 @@ void UIAUIModule::DealHidePanel(UIAPanelWidget* Panel)
 	//移除冗余元素
 	if (PanelStack.Contains(Panel))
 		PanelStack.Remove(Panel);
-	if (ActivePanels.Contains(Panel->UIProperty.UIName))
-		ActivePanels.Remove(Panel->UIProperty.UIName);
+	if (ActivePanels.Contains(Panel->PanelType))
+		ActivePanels.Remove(Panel->PanelType);
 
-	if (!HidePanels.Contains(Panel->UIProperty.UIName))
-		HidePanels.Add(Panel->UIProperty.UIName,Panel);
+	if (!HidePanels.Contains(Panel->PanelType))
+		HidePanels.Add(Panel->PanelType,Panel);
 
 	//执行隐藏
 	Panel->SetVisibility(ESlateVisibility::Collapsed);

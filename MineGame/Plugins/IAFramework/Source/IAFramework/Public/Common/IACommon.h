@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
 #include "IADefine.h"
-#include "Game/IAGameCommon.h"
 #include "IACommon.generated.h"
 
 class AIADriver;

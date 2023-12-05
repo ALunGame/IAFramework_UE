@@ -20,6 +20,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	FUIProperty UIProperty;
 
+	//界面枚举
+	EUIPanelType PanelType;
+
 public:
 
 	virtual bool Initialize() override;
@@ -49,5 +52,15 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	float DisplayLeaveMovie();
+
+		
+#if WITH_EDITOR
+	//属性修改方法
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
+
+protected:
+
+	
 	
 };

@@ -55,10 +55,6 @@ struct FUIProperty
 	GENERATED_BODY()
 
 public:
-
-	//UI界面名
-	UPROPERTY(EditAnywhere)
-	FName UIName;
 	
 	//UI层级
 	UPROPERTY(EditAnywhere)
@@ -81,3 +77,4 @@ public:
 	FMargin Offsets;
 
 };
+

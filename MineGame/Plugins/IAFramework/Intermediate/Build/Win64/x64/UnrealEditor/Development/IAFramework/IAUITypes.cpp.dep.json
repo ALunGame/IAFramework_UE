@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\private\\ui\\iauitypes.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gitproject\\iaframework_ue\\minegame\\intermediate\\build\\win64\\x64\\minegameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iaframework\\definitions.iaframework.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\ui\\iauitypes.h",
+            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\anchors.h",
+            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\anchors.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iauitypes.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
