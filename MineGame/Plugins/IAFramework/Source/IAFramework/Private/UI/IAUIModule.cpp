@@ -17,7 +17,10 @@ void UIAUIModule::ModuleInit()
 	Super::ModuleInit();
 
 	//创建UI根
-	RootWidget = MakeShareable(CreateWidget<UIARootWidget>(GetWorld(), UIRootWidgetClass));
+	RootWidget = CreateWidget<UIARootWidget>(GetWorld(), UIRootWidgetClass);
+
+	//注入模块
+	UIACommon::Get()->SetUIModule(this);
 }
 
 void UIAUIModule::ShowPanel(EUIPanelType InPanelType)
@@ -85,7 +88,7 @@ void UIAUIModule::HideAllPanels()
 	ActivePanels.Empty();
 }
 
-TSharedPtr<UIARootWidget> UIAUIModule::GeRootWidget()
+UIARootWidget* UIAUIModule::GeRootWidget() const
 {
 	return RootWidget;
 }
@@ -118,8 +121,11 @@ UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FUIPanelConfig* InPanelCfg)
 		return *ActivePanels.Find(InPanelCfg->PanelType);
 	
 	if (HidePanels.Contains(InPanelCfg->PanelType))
+	{
+		SetCanvasInTop(*HidePanels.Find(InPanelCfg->PanelType));
 		return *HidePanels.Find(InPanelCfg->PanelType);
-
+	}
+	
 	//加载资源
 	if (!InPanelCfg->Class)
 	{
@@ -198,4 +204,11 @@ void UIAUIModule::DealMask(UCanvasPanel* LayerCanvas, EUIMaskType UIMaskType)
 	MaskSlot->SetOffsets(FMargin(0.f, 0.f, 0.f, 0.f));
 
 	RootWidget->SetMask(UIMaskType);
+}
+
+void UIAUIModule::SetCanvasInTop(UIAPanelWidget* Panel)
+{
+	UCanvasPanel* ParentCanvas = Cast<UCanvasPanel>(Panel->GetParent());
+	Panel->RemoveFromRoot();
+	ParentCanvas->AddChildToCanvas(Panel);
 }

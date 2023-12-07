@@ -3,6 +3,7 @@
 
 #include "Core/IADriver.h"
 
+#include "Game/IABaseGameMode.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -38,6 +39,13 @@ void AIADriver::BeginPlay()
 	
 	//迭代调用Init函数
 	Center->ModuleInit();
+
+	//发送事件完成
+	if (Cast<AIABaseGameMode>(UGameplayStatics::GetGameMode(GetWorld())))
+	{
+		AIABaseGameMode* GameMode = Cast<AIABaseGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
+		GameMode->OnGameInit();
+	}
 }
 
 void AIADriver::RegisterGamePlay()

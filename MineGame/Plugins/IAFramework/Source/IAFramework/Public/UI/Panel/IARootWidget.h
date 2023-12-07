@@ -35,7 +35,6 @@ private:
 	UCanvasPanel* RootCanvas;
 	
 	//层级Canvas
-	UPROPERTY()
 	TMap<EUILayer,UCanvasPanel*> LayerCanvas;
 
 	//遮罩图片
@@ -46,4 +45,8 @@ private:
 	FLinearColor NormalLucency;
 	FLinearColor TranslucenceLucency;
 	FLinearColor ImPenetrableLucency;
+
+private:
+
+	void CreateLayerCanvas(EUILayer InLayer, int InZOrder);
 };

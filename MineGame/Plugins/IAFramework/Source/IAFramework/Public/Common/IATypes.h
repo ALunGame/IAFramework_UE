@@ -1,4 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -63,12 +63,12 @@ public:
 		case 0:
 		{
 			if (GEngine)
-				GEngine->AddOnScreenDebugMessage(-1, ShowTime, ShowColor, RecordInfo);
+				GEngine->AddOnScreenDebugMessage(-1, ShowTime, ShowColor, TCHAR_TO_UTF8(*RecordInfo));
 		}
 		break;
 		case 1:
 		{
-			UE_LOG(LogTemp, Log, TEXT("%s"), *RecordInfo);
+			UE_LOG(LogTemp, Log,  TEXT("%s"), *RecordInfo);
 		}
 		break;
 		case 2:
@@ -94,6 +94,7 @@ public:
 	DDRecord& operator<<(FText Info) { RecordInfo.Append(Info.ToString()); return *this; }
 	DDRecord& operator<<(const char* Info) { RecordInfo += Info; return *this; }
 	DDRecord& operator<<(const char Info) { RecordInfo.AppendChar(Info); return *this; }
+	DDRecord& operator<<(const TCHAR* Info) { RecordInfo += Info; return *this; }
 	DDRecord& operator<<(int32 Info) { RecordInfo.Append(FString::FromInt(Info)); return *this; }
 	DDRecord& operator<<(float Info) { RecordInfo.Append(FString::SanitizeFloat(Info)); return *this; }
 	DDRecord& operator<<(double Info) { RecordInfo.Append(FString::SanitizeFloat(Info)); return *this; }

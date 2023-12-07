@@ -15,6 +15,8 @@
 void UIACacheModule::ModuleInit()
 {
 	Super::ModuleInit();
+
+	UIACommon::Get()->SetCacheModule(this);
 }
 
 AIAActor* UIACacheModule::GetActor(const FName ActorName, FTransform SpawnTransform)

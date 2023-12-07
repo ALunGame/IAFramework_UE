@@ -3,6 +3,13 @@
 
 #include "Module/IATimerModule.h"
 
+void UIATimerModule::ModuleInit()
+{
+	Super::ModuleInit();
+
+	UIACommon::Get()->SetTimerModule(this);
+}
+
 void UIATimerModule::ModuleTick(float DeltaSeconds)
 {
 	Super::ModuleTick(DeltaSeconds);

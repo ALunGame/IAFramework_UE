@@ -5,6 +5,7 @@
 
 #include "Blueprint/WidgetTree.h"
 #include "Components/CanvasPanel.h"
+#include "Components/CanvasPanelSlot.h"
 #include "Components/Image.h"
 
 bool UIARootWidget::Initialize()
@@ -12,11 +13,18 @@ bool UIARootWidget::Initialize()
 	if (!Super::Initialize()) return false;
 
 	//添加到视图
-	AddToViewport();
+	//AddToViewport();
 
 	//获取根节点
-	//RootCanvas = Cast<UCanvasPanel>(GetRootWidget());
-	//RootCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
+	RootCanvas = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass());
+	RootCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
+
+	//创建层级
+	CreateLayerCanvas(EUILayer::Base,0);
+	CreateLayerCanvas(EUILayer::First,100);
+	CreateLayerCanvas(EUILayer::Second,200);
+	CreateLayerCanvas(EUILayer::Third,300);
+	CreateLayerCanvas(EUILayer::Top,400);
 
 	//生成遮罩
 	MaskImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
@@ -24,8 +32,9 @@ bool UIARootWidget::Initialize()
 	//设置透明度
 	NormalLucency = FLinearColor(1.f, 1.f, 1.f, 0.f);
 	TranslucenceLucency = FLinearColor(0.f, 0.f, 0.f, 0.6f);
-	ImPenetrableLucency = FLinearColor(0.f, 0.f, 0.f, 0.3f);
+	ImPenetrableLucency = FLinearColor(1.f, 1.f, 1.f, 1.f);
 
+	SetMask(EUIMaskType::ImPenetrable);
 	return true;
 }
 
@@ -36,13 +45,13 @@ UCanvasPanel* UIARootWidget::GetRootCanvas() const
 
 UCanvasPanel* UIARootWidget::GetLayerCanvas(EUILayer Layer)
 {
-	if (LayerCanvas.Contains(Layer))
+	if (!LayerCanvas.Contains(Layer))
 	{
 		IA::Error() << "获取层级Canvas失败，没有对应层级" << IA::GetEnumValueAsString(Layer) << IA::Endl();
 		return nullptr;
 	}
 
-	return *LayerCanvas.Find(Layer);
+	return LayerCanvas[Layer];
 }
 
 UImage* UIARootWidget::GetMask() const
@@ -72,4 +81,13 @@ void UIARootWidget::SetMask(EUIMaskType MaskType) const
 		break;
 	default: ;
 	}
+}
+
+void UIARootWidget::CreateLayerCanvas(EUILayer InLayer, int InZOrder)
+{
+	UCanvasPanel* InstCanvas   = NewObject<UCanvasPanel>(this,UCanvasPanel::StaticClass());
+	UCanvasPanelSlot* InstSlot = RootCanvas->AddChildToCanvas(InstCanvas);
+	InstSlot->SetZOrder(InZOrder);
+	InstCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
+	LayerCanvas.Add(InLayer, InstCanvas);
 }

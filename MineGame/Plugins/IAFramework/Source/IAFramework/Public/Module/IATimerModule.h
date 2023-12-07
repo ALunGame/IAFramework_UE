@@ -97,6 +97,8 @@ class IAFRAMEWORK_API UIATimerModule : public UIAModule
 
 public:
 
+	virtual void ModuleInit() override;
+	
 	virtual void ModuleTick(float DeltaSeconds) override;
 
 	template<class UserClass>

@@ -11,6 +11,8 @@ UIAAssetModule::UIAAssetModule()
 void UIAAssetModule::ModuleInit()
 {
 	Super::ModuleInit();
+
+	UIACommon::Get()->SetAssetModule(this);
 }
 
 void UIAAssetModule::ModuleBeginPlay()

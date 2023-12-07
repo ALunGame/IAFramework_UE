@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iabasegamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\gitproject\\iaframework_ue\\minegame\\intermediate\\build\\win64\\x64\\minegameeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iaframework\\definitions.iaframework.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\source\\iaframework\\public\\game\\iabasegamemode.h",
+            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\gitproject\\iaframework_ue\\minegame\\plugins\\iaframework\\intermediate\\build\\win64\\unrealeditor\\inc\\iaframework\\uht\\iabasegamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

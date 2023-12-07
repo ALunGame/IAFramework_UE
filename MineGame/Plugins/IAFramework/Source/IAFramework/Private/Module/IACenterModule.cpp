@@ -14,11 +14,6 @@ void UIACenterModule::LoadAllModules()
 		{
 			//添加这个对象到这个Module的ChildModule
 			ModuleGroup.Add(ChildModule->ModuleType,ChildModule);
-			//设置全局模组
-			if (ChildModule->ModuleType == EGameModule::Timer)
-			{
-				UIACommon::Get()->SetTimerModule((UIATimerModule*)ChildModule);
-			}
 		}
 	}
 }
