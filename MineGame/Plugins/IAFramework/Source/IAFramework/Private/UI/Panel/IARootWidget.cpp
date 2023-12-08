@@ -6,17 +6,16 @@
 #include "Blueprint/WidgetTree.h"
 #include "Components/CanvasPanel.h"
 #include "Components/CanvasPanelSlot.h"
-#include "Components/Image.h"
 
 bool UIARootWidget::Initialize()
 {
 	if (!Super::Initialize()) return false;
 
 	//添加到视图
-	//AddToViewport();
+	AddToViewport();
 
 	//获取根节点
-	RootCanvas = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass());
+	RootCanvas = Cast<UCanvasPanel>(GetRootWidget());
 	RootCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
 
 	//创建层级
@@ -25,16 +24,7 @@ bool UIARootWidget::Initialize()
 	CreateLayerCanvas(EUILayer::Second,200);
 	CreateLayerCanvas(EUILayer::Third,300);
 	CreateLayerCanvas(EUILayer::Top,400);
-
-	//生成遮罩
-	MaskImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
-
-	//设置透明度
-	NormalLucency = FLinearColor(1.f, 1.f, 1.f, 0.f);
-	TranslucenceLucency = FLinearColor(0.f, 0.f, 0.f, 0.6f);
-	ImPenetrableLucency = FLinearColor(1.f, 1.f, 1.f, 1.f);
-
-	SetMask(EUIMaskType::ImPenetrable);
+	
 	return true;
 }
 
@@ -54,40 +44,15 @@ UCanvasPanel* UIARootWidget::GetLayerCanvas(EUILayer Layer)
 	return LayerCanvas[Layer];
 }
 
-UImage* UIARootWidget::GetMask() const
-{
-	return MaskImage;
-}
-
-void UIARootWidget::SetMask(EUIMaskType MaskType) const
-{
-	switch (MaskType)
-	{
-	case EUIMaskType::Lucency:
-		MaskImage->SetVisibility(ESlateVisibility::Visible);
-		MaskImage->SetColorAndOpacity(NormalLucency);
-		break;
-	case EUIMaskType::Translucence:
-		MaskImage->SetVisibility(ESlateVisibility::Visible);
-		MaskImage->SetColorAndOpacity(TranslucenceLucency);
-		break;
-	case EUIMaskType::ImPenetrable:
-		MaskImage->SetVisibility(ESlateVisibility::Visible);
-		MaskImage->SetColorAndOpacity(ImPenetrableLucency);
-		break;
-	case EUIMaskType::Pentrate:
-		MaskImage->SetVisibility(ESlateVisibility::Hidden);
-		MaskImage->SetColorAndOpacity(NormalLucency);
-		break;
-	default: ;
-	}
-}
-
 void UIARootWidget::CreateLayerCanvas(EUILayer InLayer, int InZOrder)
 {
 	UCanvasPanel* InstCanvas   = NewObject<UCanvasPanel>(this,UCanvasPanel::StaticClass());
 	UCanvasPanelSlot* InstSlot = RootCanvas->AddChildToCanvas(InstCanvas);
 	InstSlot->SetZOrder(InZOrder);
 	InstCanvas->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
+
+	InstSlot->SetAnchors(FAnchors(0,0,1,1));
+	InstSlot->SetOffsets(FMargin(0,0,0,0));
+	
 	LayerCanvas.Add(InLayer, InstCanvas);
 }

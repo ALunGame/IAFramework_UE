@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeIARootWidget() {}
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIARootWidget();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIARootWidget_NoRegister();
 	IAFRAMEWORK_API UClass* Z_Construct_UClass_UIAUserWidget();
+	UMG_API UClass* Z_Construct_UClass_UCanvasPanel_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_IAFramework();
 // End Cross Module References
@@ -29,6 +30,10 @@ void EmptyLinkFunctionForGeneratedCodeIARootWidget() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RootCanvas_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_RootCanvas;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaskImage_MetaData[];
 #endif
@@ -50,6 +55,15 @@ void EmptyLinkFunctionForGeneratedCodeIARootWidget() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIARootWidget_Statics::NewProp_RootCanvas_MetaData[] = {
+		{ "Comment", "//\xe6\xa0\xb9\xe8\x8a\x82\xe7\x82\xb9\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/UI/Panel/IARootWidget.h" },
+		{ "ToolTip", "\xe6\xa0\xb9\xe8\x8a\x82\xe7\x82\xb9" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIARootWidget_Statics::NewProp_RootCanvas = { "RootCanvas", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIARootWidget, RootCanvas), Z_Construct_UClass_UCanvasPanel_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UIARootWidget_Statics::NewProp_RootCanvas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIARootWidget_Statics::NewProp_RootCanvas_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIARootWidget_Statics::NewProp_MaskImage_MetaData[] = {
 		{ "Comment", "//\xe9\x81\xae\xe7\xbd\xa9\xe5\x9b\xbe\xe7\x89\x87\n" },
 		{ "EditInline", "true" },
@@ -59,6 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeIARootWidget() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIARootWidget_Statics::NewProp_MaskImage = { "MaskImage", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIARootWidget, MaskImage), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UIARootWidget_Statics::NewProp_MaskImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIARootWidget_Statics::NewProp_MaskImage_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UIARootWidget_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIARootWidget_Statics::NewProp_RootCanvas,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIARootWidget_Statics::NewProp_MaskImage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UIARootWidget_Statics::StaticCppClassTypeInfo = {
@@ -99,9 +114,9 @@ void EmptyLinkFunctionForGeneratedCodeIARootWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IARootWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIARootWidget, UIARootWidget::StaticClass, TEXT("UIARootWidget"), &Z_Registration_Info_UClass_UIARootWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIARootWidget), 2785324745U) },
+		{ Z_Construct_UClass_UIARootWidget, UIARootWidget::StaticClass, TEXT("UIARootWidget"), &Z_Registration_Info_UClass_UIARootWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIARootWidget), 3233471288U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IARootWidget_h_3333750460(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IARootWidget_h_3874894305(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IARootWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IARootWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

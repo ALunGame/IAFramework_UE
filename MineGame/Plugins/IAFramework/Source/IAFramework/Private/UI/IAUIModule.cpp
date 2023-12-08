@@ -140,8 +140,6 @@ UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FUIPanelConfig* InPanelCfg)
 	
 	//添加UI面板到父控件
 	UCanvasPanelSlot* PanelSlot = RootWidget->GetLayerCanvas(NewPanel->UIProperty.UILayer)->AddChildToCanvas(NewPanel);
-	PanelSlot->SetAnchors(NewPanel->UIProperty.Anchors);
-	PanelSlot->SetOffsets(NewPanel->UIProperty.Offsets);
 
 	//初始化方法
 	NewPanel->Awake();
@@ -168,9 +166,6 @@ void UIAUIModule::DealShowPanel(UIAPanelWidget* Panel, EUIShowRule ShowRule)
 	//入栈
 	if (ShowRule == EUIShowRule::Overlay || ShowRule == EUIShowRule::HideOther)
 		PanelStack.Push(Panel);
-
-	//显示遮罩
-	DealMask(RootWidget->GetLayerCanvas(Panel->UIProperty.UILayer),Panel->UIProperty.UIMaskType);
 	
 	//执行显示
 	Panel->SetVisibility(ESlateVisibility::Visible);
@@ -191,19 +186,6 @@ void UIAUIModule::DealHidePanel(UIAPanelWidget* Panel)
 	//执行隐藏
 	Panel->SetVisibility(ESlateVisibility::Collapsed);
 	Panel->Hide();
-}
-
-void UIAUIModule::DealMask(UCanvasPanel* LayerCanvas, EUIMaskType UIMaskType)
-{
-	//移出遮罩
-	RootWidget->GetMask()->RemoveFromParent();
-
-	//添加遮罩到新的父控件
-	UCanvasPanelSlot* MaskSlot = LayerCanvas->AddChildToCanvas(RootWidget->GetMask());
-	MaskSlot->SetAnchors(FAnchors(0.f, 0.f, 1.f, 1.f));
-	MaskSlot->SetOffsets(FMargin(0.f, 0.f, 0.f, 0.f));
-
-	RootWidget->SetMask(UIMaskType);
 }
 
 void UIAUIModule::SetCanvasInTop(UIAPanelWidget* Panel)

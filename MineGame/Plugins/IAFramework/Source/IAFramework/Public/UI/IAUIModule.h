@@ -54,10 +54,13 @@ private:
 	UIARootWidget* RootWidget;
 	
 	//保存Canvas控件
+	UPROPERTY()
 	TMap<EUIPanelType,UIAPanelWidget*> ActivePanels;
+	UPROPERTY()
 	TMap<EUIPanelType,UIAPanelWidget*> HidePanels;
 	
 	//界面栈
+	UPROPERTY()
 	TArray<UIAPanelWidget*> PanelStack;
 
 private:
@@ -67,8 +70,6 @@ private:
 	void DealShowPanel(UIAPanelWidget* Panel, EUIShowRule ShowRule);
 
 	void DealHidePanel(UIAPanelWidget* Panel);
-
-	void DealMask(UCanvasPanel* LayerCanvas, EUIMaskType UIMaskType);
 
 	void SetCanvasInTop(UIAPanelWidget* Panel);
 };

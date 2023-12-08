@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeIAFramework_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xBAD0E912,
+				0x91AB87C9,
 				0xA5446086,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeIAFramework_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_IAFramework.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_IAFramework(Z_Construct_UPackage__Script_IAFramework, TEXT("/Script/IAFramework"), Z_Registration_Info_UPackage__Script_IAFramework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xBAD0E912, 0xA5446086));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_IAFramework(Z_Construct_UPackage__Script_IAFramework, TEXT("/Script/IAFramework"), Z_Registration_Info_UPackage__Script_IAFramework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x91AB87C9, 0xA5446086));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

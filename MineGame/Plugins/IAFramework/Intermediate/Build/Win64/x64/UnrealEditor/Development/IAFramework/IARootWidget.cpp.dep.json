@@ -72,12 +72,7 @@
             "d:\\ue\\ue_5.2\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sconstraintcanvas.h",
             "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\canvaspanel.generated.h",
             "d:\\ue\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\canvaspanelslot.h",
-            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\canvaspanelslot.generated.h",
-            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\umg\\public\\components\\image.h",
-            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\engine\\public\\slate\\slatetextureatlasinterface.h",
-            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\slatetextureatlasinterface.generated.h",
-            "d:\\ue\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\streamablemanager.h",
-            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\image.generated.h"
+            "d:\\ue\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\canvaspanelslot.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

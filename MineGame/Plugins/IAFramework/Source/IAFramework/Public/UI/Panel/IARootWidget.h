@@ -24,14 +24,11 @@ public:
 	UCanvasPanel* GetRootCanvas() const;
 	
 	UCanvasPanel* GetLayerCanvas(EUILayer Layer);
-	
-	UImage* GetMask() const;
-
-	void SetMask(EUIMaskType MaskType) const;
 
 private:
 
 	//根节点
+	UPROPERTY()
 	UCanvasPanel* RootCanvas;
 	
 	//层级Canvas
