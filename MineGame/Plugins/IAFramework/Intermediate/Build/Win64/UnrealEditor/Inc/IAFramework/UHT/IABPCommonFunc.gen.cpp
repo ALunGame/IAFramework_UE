@@ -55,7 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeIABPCommonFunc() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::NewProp_InPanelType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::NewProp_InPanelType = { "InPanelType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IABPCommonFunc_eventHideUI_Parms, InPanelType), Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1826853664
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::NewProp_InPanelType = { "InPanelType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IABPCommonFunc_eventHideUI_Parms, InPanelType), Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1432966391
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::NewProp_InPanelType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIABPCommonFunc_HideUI_Statics::NewProp_InPanelType,
@@ -91,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeIABPCommonFunc() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::NewProp_InPanelType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::NewProp_InPanelType = { "InPanelType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IABPCommonFunc_eventShowUI_Parms, InPanelType), Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1826853664
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::NewProp_InPanelType = { "InPanelType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(IABPCommonFunc_eventShowUI_Parms, InPanelType), Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1432966391
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::NewProp_InPanelType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UIABPCommonFunc_ShowUI_Statics::NewProp_InPanelType,
@@ -132,8 +132,8 @@ void EmptyLinkFunctionForGeneratedCodeIABPCommonFunc() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UIABPCommonFunc_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UIABPCommonFunc_HideUI, "HideUI" }, // 1565436714
-		{ &Z_Construct_UFunction_UIABPCommonFunc_ShowUI, "ShowUI" }, // 17301723
+		{ &Z_Construct_UFunction_UIABPCommonFunc_HideUI, "HideUI" }, // 3464955645
+		{ &Z_Construct_UFunction_UIABPCommonFunc_ShowUI, "ShowUI" }, // 3420450908
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIABPCommonFunc_Statics::Class_MetaDataParams[] = {
@@ -181,9 +181,9 @@ void EmptyLinkFunctionForGeneratedCodeIABPCommonFunc() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IABPCommonFunc_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIABPCommonFunc, UIABPCommonFunc::StaticClass, TEXT("UIABPCommonFunc"), &Z_Registration_Info_UClass_UIABPCommonFunc, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIABPCommonFunc), 124587871U) },
+		{ Z_Construct_UClass_UIABPCommonFunc, UIABPCommonFunc::StaticClass, TEXT("UIABPCommonFunc"), &Z_Registration_Info_UClass_UIABPCommonFunc, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIABPCommonFunc), 1843218563U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IABPCommonFunc_h_2353611256(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IABPCommonFunc_h_2313980879(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IABPCommonFunc_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_Common_IABPCommonFunc_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

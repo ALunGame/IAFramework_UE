@@ -140,6 +140,8 @@ UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FUIPanelConfig* InPanelCfg)
 	
 	//添加UI面板到父控件
 	UCanvasPanelSlot* PanelSlot = RootWidget->GetLayerCanvas(NewPanel->UIProperty.UILayer)->AddChildToCanvas(NewPanel);
+	PanelSlot->SetAnchors(FAnchors(0, 0, 1, 1));
+	PanelSlot->SetOffsets(FMargin(0, 0, 0, 0));
 
 	//初始化方法
 	NewPanel->Awake();

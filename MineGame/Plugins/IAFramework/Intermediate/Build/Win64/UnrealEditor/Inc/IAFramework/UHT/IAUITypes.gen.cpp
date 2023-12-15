@@ -6,8 +6,6 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "IAFramework/Public/UI/IAUITypes.h"
-#include "Layout/Margin.h"
-#include "Widgets/Layout/Anchors.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeIAUITypes() {}
 // Cross Module References
@@ -18,8 +16,6 @@ void EmptyLinkFunctionForGeneratedCodeIAUITypes() {}
 	IAFRAMEWORK_API UEnum* Z_Construct_UEnum_IAFramework_EUIMaskType();
 	IAFRAMEWORK_API UEnum* Z_Construct_UEnum_IAFramework_EUIShowRule();
 	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FUIProperty();
-	SLATE_API UScriptStruct* Z_Construct_UScriptStruct_FAnchors();
-	SLATECORE_API UScriptStruct* Z_Construct_UScriptStruct_FMargin();
 	UPackage* Z_Construct_UPackage__Script_IAFramework();
 // End Cross Module References
 	void UIAUITypes::StaticRegisterNativesUIAUITypes()
@@ -317,14 +313,6 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUIProperty>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_UIMaskType_MetaData[];
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_UIMaskType;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Anchors_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_Anchors;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Offsets_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_Offsets;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -369,24 +357,6 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUIProperty>()
 	};
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UIMaskType = { "UIMaskType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FUIProperty, UIMaskType), Z_Construct_UEnum_IAFramework_EUIMaskType, METADATA_PARAMS(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UIMaskType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UIMaskType_MetaData)) }; // 148761019
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Anchors_MetaData[] = {
-		{ "Category", "UIProperty" },
-		{ "Comment", "//Canvas\xe9\x94\x9a\xe7\x82\xb9\n" },
-		{ "ModuleRelativePath", "Public/UI/IAUITypes.h" },
-		{ "ToolTip", "Canvas\xe9\x94\x9a\xe7\x82\xb9" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Anchors = { "Anchors", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FUIProperty, Anchors), Z_Construct_UScriptStruct_FAnchors, METADATA_PARAMS(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Anchors_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Anchors_MetaData)) }; // 3429000087
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Offsets_MetaData[] = {
-		{ "Category", "UIProperty" },
-		{ "Comment", "//Canvas\xe7\x9a\x84Offset(pos, size)  Overlay\xe7\x9a\x84padding\n" },
-		{ "ModuleRelativePath", "Public/UI/IAUITypes.h" },
-		{ "ToolTip", "Canvas\xe7\x9a\x84Offset(pos, size)  Overlay\xe7\x9a\x84padding" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Offsets = { "Offsets", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FUIProperty, Offsets), Z_Construct_UScriptStruct_FMargin, METADATA_PARAMS(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Offsets_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Offsets_MetaData)) }; // 2014822612
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FUIProperty_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UILayer_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UILayer,
@@ -394,8 +364,6 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUIProperty>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_DefaultPanelShowRule,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UIMaskType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_UIMaskType,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Anchors,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIProperty_Statics::NewProp_Offsets,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIProperty_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_IAFramework,
@@ -430,12 +398,12 @@ template<> IAFRAMEWORK_API UScriptStruct* StaticStruct<FUIProperty>()
 		{ EUIMaskType_StaticEnum, TEXT("EUIMaskType"), &Z_Registration_Info_UEnum_EUIMaskType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 148761019U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ScriptStructInfo[] = {
-		{ FUIProperty::StaticStruct, Z_Construct_UScriptStruct_FUIProperty_Statics::NewStructOps, TEXT("UIProperty"), &Z_Registration_Info_UScriptStruct_UIProperty, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIProperty), 483079122U) },
+		{ FUIProperty::StaticStruct, Z_Construct_UScriptStruct_FUIProperty_Statics::NewStructOps, TEXT("UIProperty"), &Z_Registration_Info_UScriptStruct_UIProperty, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIProperty), 3345058919U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UIAUITypes, UIAUITypes::StaticClass, TEXT("UIAUITypes"), &Z_Registration_Info_UClass_UIAUITypes, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUITypes), 803489246U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_1640896205(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_3406246193(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUITypes_h_Statics::EnumInfo));

@@ -53,9 +53,9 @@ void EmptyLinkFunctionForGeneratedCodeIAUIPanelConfig() {}
 		{ "ModuleRelativePath", "Public/UI/IAUIPanelConfig.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_ValueProp = { "PanelConfig", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 1, Z_Construct_UScriptStruct_FUIPanelConfig, METADATA_PARAMS(nullptr, 0) }; // 234762852
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_ValueProp = { "PanelConfig", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 1, Z_Construct_UScriptStruct_FUIPanelConfig, METADATA_PARAMS(nullptr, 0) }; // 4281990429
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_Key_KeyProp = { "PanelConfig_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1826853664
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_Key_KeyProp = { "PanelConfig_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1432966391
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_MetaData[] = {
 		{ "Category", "IAUIPanelConfig" },
@@ -63,7 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeIAUIPanelConfig() {}
 		{ "ModuleRelativePath", "Public/UI/IAUIPanelConfig.h" },
 	};
 #endif
-	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig = { "PanelConfig", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIPanelConfig, PanelConfig), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_MetaData)) }; // 1826853664 234762852
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig = { "PanelConfig", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIPanelConfig, PanelConfig), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_MetaData)) }; // 1432966391 4281990429
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UIAUIPanelConfig_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_ValueProp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIAUIPanelConfig_Statics::NewProp_PanelConfig_Key_KeyProp_Underlying,
@@ -108,9 +108,9 @@ void EmptyLinkFunctionForGeneratedCodeIAUIPanelConfig() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIPanelConfig_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAUIPanelConfig, UIAUIPanelConfig::StaticClass, TEXT("UIAUIPanelConfig"), &Z_Registration_Info_UClass_UIAUIPanelConfig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUIPanelConfig), 4020340472U) },
+		{ Z_Construct_UClass_UIAUIPanelConfig, UIAUIPanelConfig::StaticClass, TEXT("UIAUIPanelConfig"), &Z_Registration_Info_UClass_UIAUIPanelConfig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUIPanelConfig), 424340826U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIPanelConfig_h_2036336410(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIPanelConfig_h_4107998340(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIPanelConfig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIPanelConfig_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

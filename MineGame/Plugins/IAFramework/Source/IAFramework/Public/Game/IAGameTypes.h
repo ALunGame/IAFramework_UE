@@ -32,6 +32,8 @@ enum class EGameModule : uint8
 UENUM()
 enum class EUIPanelType : uint8 {
 	StartMenu UMETA(DisplayName = "开始菜单"),
+	Setting UMETA(DisplayName = "游戏设置"),
+	Record UMETA(DisplayName = "游戏存档"),
 };
 
 //UI界面配置

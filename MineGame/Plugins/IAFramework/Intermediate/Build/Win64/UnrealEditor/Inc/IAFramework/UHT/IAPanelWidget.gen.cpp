@@ -274,7 +274,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty = { "UIProperty", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAPanelWidget, UIProperty), Z_Construct_UScriptStruct_FUIProperty, METADATA_PARAMS(Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty_MetaData)) }; // 483079122
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty = { "UIProperty", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAPanelWidget, UIProperty), Z_Construct_UScriptStruct_FUIProperty, METADATA_PARAMS(Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty_MetaData)) }; // 3345058919
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UIAPanelWidget_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UIAPanelWidget_Statics::NewProp_UIProperty,
 	};
@@ -316,9 +316,9 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 1382046914U) },
+		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 3760666044U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_3199884149(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_1490987771(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

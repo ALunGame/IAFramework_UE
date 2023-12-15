@@ -1,4 +1,4 @@
-D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Private\Game\IAGameTypes.cpp
+D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Private\UI\IAUITypes.cpp
 /I .
 /I D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject\UHT
@@ -280,7 +280,7 @@ D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Pri
 /external:I ThirdParty\mimalloc\include
 /external:I ThirdParty\LibTiff\Source\Win64
 /external:I ThirdParty\LibTiff\Source
-/external:I "d:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\INCLUDE"
+/external:I "d:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\INCLUDE"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
@@ -289,8 +289,8 @@ D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Source\IAFramework\Pri
 /FI"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Definitions.IAFramework.h"
 /Yu"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
 /Fp"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
-/Fo"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAGameTypes.cpp.obj"
-/sourceDependencies D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAGameTypes.cpp.dep.json
+/Fo"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAUITypes.cpp.obj"
+/sourceDependencies D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAUITypes.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

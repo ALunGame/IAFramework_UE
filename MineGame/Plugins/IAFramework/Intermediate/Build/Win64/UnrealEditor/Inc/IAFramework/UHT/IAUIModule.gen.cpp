@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeIAUIModule() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_RootWidget = { "RootWidget", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIModule, RootWidget), Z_Construct_UClass_UIARootWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UIAUIModule_Statics::NewProp_RootWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIModule_Statics::NewProp_RootWidget_MetaData)) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_ValueProp = { "ActivePanels", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 1, Z_Construct_UClass_UIAPanelWidget_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_Key_KeyProp = { "ActivePanels_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1826853664
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_Key_KeyProp = { "ActivePanels_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1432966391
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_MetaData[] = {
 		{ "Comment", "//\xe4\xbf\x9d\xe5\xad\x98""Canvas\xe6\x8e\xa7\xe4\xbb\xb6\n" },
@@ -115,17 +115,17 @@ void EmptyLinkFunctionForGeneratedCodeIAUIModule() {}
 		{ "ToolTip", "\xe4\xbf\x9d\xe5\xad\x98""Canvas\xe6\x8e\xa7\xe4\xbb\xb6" },
 	};
 #endif
-	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels = { "ActivePanels", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIModule, ActivePanels), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_MetaData)) }; // 1826853664
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels = { "ActivePanels", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIModule, ActivePanels), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIModule_Statics::NewProp_ActivePanels_MetaData)) }; // 1432966391
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_ValueProp = { "HidePanels", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 1, Z_Construct_UClass_UIAPanelWidget_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_Key_KeyProp = { "HidePanels_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1826853664
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_Key_KeyProp = { "HidePanels_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UEnum_IAFramework_EUIPanelType, METADATA_PARAMS(nullptr, 0) }; // 1432966391
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/UI/IAUIModule.h" },
 	};
 #endif
-	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels = { "HidePanels", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIModule, HidePanels), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_MetaData)) }; // 1826853664
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels = { "HidePanels", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UIAUIModule, HidePanels), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UIAUIModule_Statics::NewProp_HidePanels_MetaData)) }; // 1432966391
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UIAUIModule_Statics::NewProp_PanelStack_Inner = { "PanelStack", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UClass_UIAPanelWidget_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAUIModule_Statics::NewProp_PanelStack_MetaData[] = {
@@ -189,9 +189,9 @@ void EmptyLinkFunctionForGeneratedCodeIAUIModule() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIModule_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAUIModule, UIAUIModule::StaticClass, TEXT("UIAUIModule"), &Z_Registration_Info_UClass_UIAUIModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUIModule), 3016019787U) },
+		{ Z_Construct_UClass_UIAUIModule, UIAUIModule::StaticClass, TEXT("UIAUIModule"), &Z_Registration_Info_UClass_UIAUIModule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAUIModule), 1982096023U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIModule_h_44834306(TEXT("/Script/IAFramework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIModule_h_1086728338(TEXT("/Script/IAFramework"),
 		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIModule_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_IAUIModule_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -68,13 +68,13 @@ public:
 	UPROPERTY(EditAnywhere)
 	EUIMaskType UIMaskType;
 
-	//Canvas锚点
-	UPROPERTY(EditAnywhere)
-	FAnchors Anchors;
-
-	//Canvas的Offset(pos, size)  Overlay的padding
-	UPROPERTY(EditAnywhere)
-	FMargin Offsets;
+	// //Canvas锚点
+	// UPROPERTY(EditAnywhere)
+	// FAnchors Anchors;
+	//
+	// //Canvas的Offset(pos, size)  Overlay的padding
+	// UPROPERTY(EditAnywhere)
+	// FMargin Offsets;
 
 };
 
