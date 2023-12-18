@@ -7,6 +7,7 @@
 #include "UI/IAUITypes.h"
 #include "IAPanelWidget.generated.h"
 
+class UCanvasPanelSlot;
 /**
  * 
  */
@@ -20,12 +21,15 @@ public:
 	UPROPERTY(EditAnywhere)
 	FUIProperty UIProperty;
 
-	//界面枚举
-	EUIPanelType PanelType;
+	
 
 public:
 
-	virtual bool Initialize() override;
+	void InitData(EUIPanelType InPanelType);
+
+	EUIPanelType GetPanelType();
+
+	void ResetPanelOffset();
 
 	//UI面板生命周期
 	virtual void Awake();		//初始化
@@ -59,8 +63,9 @@ public:
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif
 
-protected:
+private:
 
-	
+	//界面枚举
+	EUIPanelType PanelType;
 	
 };

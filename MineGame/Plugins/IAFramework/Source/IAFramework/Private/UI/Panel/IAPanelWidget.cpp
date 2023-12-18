@@ -1,10 +1,26 @@
 ﻿#include "UI/Panel/IAPanelWidget.h"
 
-bool UIAPanelWidget::Initialize()
+#include "Components/CanvasPanel.h"
+#include "Components/CanvasPanelSlot.h"
+#include "UI/IAUIModule.h"
+#include "UI/Panel/IARootWidget.h"
+
+void UIAPanelWidget::InitData(EUIPanelType InPanelType)
 {
-	if (!Super::Initialize()) return false;
-	
-	return true;
+	PanelType = InPanelType;
+}
+
+EUIPanelType UIAPanelWidget::GetPanelType()
+{
+	return PanelType;
+}
+
+void UIAPanelWidget::ResetPanelOffset()
+{
+	//添加UI面板到父控件
+	UCanvasPanelSlot* PanelSlot = UIACommon::Get()->GetUIModule()->GeRootWidget()->GetLayerCanvas(UIProperty.UILayer)->AddChildToCanvas(this);
+	PanelSlot->SetAnchors(FAnchors(0, 0, 1, 1));
+	PanelSlot->SetOffsets(FMargin(0, 0, 0, 0));
 }
 
 void UIAPanelWidget::Awake()

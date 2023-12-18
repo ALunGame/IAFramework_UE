@@ -48,8 +48,7 @@ void UIAUIModule::HidePanel(EUIPanelType InPanelType)
 		IA::Warning() << "UI隐藏失败！！该UI已经隐藏" << IA::GetEnumValueAsString(InPanelType) << IA::Endl();
 		return;
 	}
-	ActivePanels.Remove(InPanelType);
-
+	
 	//数据
 	UIAPanelWidget* Panel = ActivePanels[InPanelType];
 	ActivePanels.Remove(InPanelType);
@@ -60,7 +59,7 @@ void UIAUIModule::HidePanel(EUIPanelType InPanelType)
 	DealHidePanel(Panel);	
 	
 	//判断栈顶元素
-	if (PanelStack.Last()->PanelType == InPanelType)
+	if (!PanelStack.IsEmpty() && PanelStack.Last()->GetPanelType() == InPanelType)
 	{
 		//显示下一个
 		PanelStack.Remove(Panel);
@@ -95,12 +94,20 @@ UIARootWidget* UIAUIModule::GeRootWidget() const
 
 FUIPanelConfig* UIAUIModule::GetUIPanelConfig(EUIPanelType InPanelType) const
 {
-	if (!UIPanelConfig || !UIPanelConfig->PanelConfig.Contains(InPanelType))
+	if (!UIPanelConfig)
 	{
 		return nullptr;
 	}
 
-	return UIPanelConfig->PanelConfig.Find(InPanelType);
+	for(TArray<FUIPanelConfig>::TIterator It(UIPanelConfig->PanelConfig); It; ++It)
+	{
+		if ((*It).PanelType == InPanelType)
+		{
+			return &(*It);
+		}
+	}
+	
+	return nullptr;
 }
 
 void UIAUIModule::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
@@ -138,12 +145,8 @@ UIAPanelWidget* UIAUIModule::GetOrCreatePanel(FUIPanelConfig* InPanelCfg)
 	}
 	UIAPanelWidget* NewPanel = CreateWidget<UIAPanelWidget>(UIACommon::Get()->GetDriver()->GetWorld(), InPanelCfg->Class);
 	
-	//添加UI面板到父控件
-	UCanvasPanelSlot* PanelSlot = RootWidget->GetLayerCanvas(NewPanel->UIProperty.UILayer)->AddChildToCanvas(NewPanel);
-	PanelSlot->SetAnchors(FAnchors(0, 0, 1, 1));
-	PanelSlot->SetOffsets(FMargin(0, 0, 0, 0));
-
 	//初始化方法
+	NewPanel->InitData(InPanelCfg->PanelType);
 	NewPanel->Awake();
 
 	return NewPanel;
@@ -154,22 +157,23 @@ void UIAUIModule::DealShowPanel(UIAPanelWidget* Panel, EUIShowRule ShowRule)
 	//移除冗余元素
 	if (PanelStack.Contains(Panel))
 		PanelStack.Remove(Panel);
-	if (HidePanels.Contains(Panel->PanelType))
-		HidePanels.Remove(Panel->PanelType);
+	if (HidePanels.Contains(Panel->GetPanelType()))
+		HidePanels.Remove(Panel->GetPanelType());
 	
 	//隐藏其他
 	if (ShowRule == EUIShowRule::HideOther || ShowRule == EUIShowRule::HideOther_NoNeedBack)
 		HideAllPanels();
 
 	//设置数据
-	if (!ActivePanels.Contains(Panel->PanelType))
-		ActivePanels.Add(Panel->PanelType,Panel);
+	if (!ActivePanels.Contains(Panel->GetPanelType()))
+		ActivePanels.Add(Panel->GetPanelType(),Panel);
 
 	//入栈
 	if (ShowRule == EUIShowRule::Overlay || ShowRule == EUIShowRule::HideOther)
 		PanelStack.Push(Panel);
 	
 	//执行显示
+	Panel->ResetPanelOffset();
 	Panel->SetVisibility(ESlateVisibility::Visible);
 	Panel->Show();
 }
@@ -179,11 +183,11 @@ void UIAUIModule::DealHidePanel(UIAPanelWidget* Panel)
 	//移除冗余元素
 	if (PanelStack.Contains(Panel))
 		PanelStack.Remove(Panel);
-	if (ActivePanels.Contains(Panel->PanelType))
-		ActivePanels.Remove(Panel->PanelType);
+	if (ActivePanels.Contains(Panel->GetPanelType()))
+		ActivePanels.Remove(Panel->GetPanelType());
 
-	if (!HidePanels.Contains(Panel->PanelType))
-		HidePanels.Add(Panel->PanelType,Panel);
+	if (!HidePanels.Contains(Panel->GetPanelType()))
+		HidePanels.Add(Panel->GetPanelType(),Panel);
 
 	//执行隐藏
 	Panel->SetVisibility(ESlateVisibility::Collapsed);

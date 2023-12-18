@@ -21,5 +21,5 @@ class IAFRAMEWORK_API UIAUIPanelConfig : public UDataAsset
 public:
 
 	UPROPERTY(EditAnywhere,meta=(DisplayName = "UI界面配置"))
-	TMap<EUIPanelType,FUIPanelConfig> PanelConfig;
+	TArray<FUIPanelConfig> PanelConfig;
 };
