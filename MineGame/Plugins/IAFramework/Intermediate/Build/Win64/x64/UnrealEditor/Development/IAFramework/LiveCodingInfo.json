@@ -17,6 +17,7 @@
 			"IACommon.gen.cpp.obj",
 			"IADefine.gen.cpp.obj",
 			"IADriver.gen.cpp.obj",
+			"IAFramework.init.gen.cpp.obj",
 			"IAGameCommon.gen.cpp.obj",
 			"IAGameTypes.gen.cpp.obj",
 			"IAModule.gen.cpp.obj",
@@ -27,6 +28,7 @@
 			"IATimerModule.gen.cpp.obj",
 			"IATypes.gen.cpp.obj",
 			"IAUIModule.gen.cpp.obj",
+			"IAUIPanelConfig.gen.cpp.obj",
 			"IAUITypes.gen.cpp.obj",
 			"IAUserWidget.gen.cpp.obj",
 			"IAAssetMappin.cpp.obj",
@@ -52,13 +54,11 @@
 			"IAObject.cpp.obj",
 			"IAOO.cpp.obj",
 			"IAUserWidget.cpp.obj",
-			"IAUITypes.cpp.obj",
-			"IARootWidget.cpp.obj",
-			"IAFramework.init.gen.cpp.obj",
-			"IAUIPanelConfig.gen.cpp.obj",
 			"IAUIModule.cpp.obj",
 			"IAUIPanelConfig.cpp.obj",
-			"IAPanelWidget.cpp.obj"
+			"IAUITypes.cpp.obj",
+			"IAPanelWidget.cpp.obj",
+			"IARootWidget.cpp.obj"
 		]
 	}
 }

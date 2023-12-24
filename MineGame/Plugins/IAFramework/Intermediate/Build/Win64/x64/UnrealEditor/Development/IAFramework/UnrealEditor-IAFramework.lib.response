@@ -6,12 +6,7 @@
 /NAME:"UnrealEditor-IAFramework.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\GitProject\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAUIModule.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAUIPanelConfig.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAPanelWidget.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAFramework.init.gen.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\IAUIPanelConfig.gen.cpp.obj"
-"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Default.rc2.res"
-/OUT:"D:\GitProject\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\UnrealEditor-IAFramework.lib"
+"G:\UE\Project\IAFramework_UE\MineGame\Intermediate\Build\Win64\x64\MineGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.obj"
+"G:\UE\Project\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Module.IAFramework.cpp.obj"
+"G:\UE\Project\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\Default.rc2.res"
+/OUT:"G:\UE\Project\IAFramework_UE\MineGame\Plugins\IAFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\IAFramework\UnrealEditor-IAFramework.lib"

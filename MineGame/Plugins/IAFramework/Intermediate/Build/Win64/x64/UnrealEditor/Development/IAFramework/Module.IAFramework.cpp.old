@@ -19,6 +19,7 @@
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IAModule.gen.cpp"
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IAObject.gen.cpp"
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IAOO.gen.cpp"
+#include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IAPanelWidget.gen.cpp"
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IARootWidget.gen.cpp"
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IATimerModule.gen.cpp"
 #include "D:/GitProject/IAFramework_UE/MineGame/Plugins/IAFramework/Intermediate/Build/Win64/UnrealEditor/Inc/IAFramework/UHT/IATypes.gen.cpp"
