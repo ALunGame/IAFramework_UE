@@ -16,6 +16,13 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	IAFRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FUIProperty();
 	UPackage* Z_Construct_UPackage__Script_IAFramework();
 // End Cross Module References
+	DEFINE_FUNCTION(UIAPanelWidget::execHideSelf)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->HideSelf();
+		P_NATIVE_END;
+	}
 	struct IAPanelWidget_eventDisplayEnterMovie_Parms
 	{
 		float ReturnValue;
@@ -72,6 +79,11 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	}
 	void UIAPanelWidget::StaticRegisterNativesUIAPanelWidget()
 	{
+		UClass* Class = UIAPanelWidget::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "HideSelf", &UIAPanelWidget::execHideSelf },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UIAPanelWidget_DisplayEnterMovie_Statics
 	{
@@ -131,6 +143,32 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics::Function_MetaDataParams[] = {
+		{ "Category", "IA" },
+		{ "Comment", "//\xe9\x94\x80\xe6\xaf\x81\n" },
+		{ "DisplayName", "\xe5\x85\xb3\xe9\x97\xad\xe8\x87\xaa\xe8\xba\xab" },
+		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
+		{ "ToolTip", "\xe9\x94\x80\xe6\xaf\x81" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UIAPanelWidget, nullptr, "HideSelf", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UIAPanelWidget_HideSelf()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UIAPanelWidget_HideSelf_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UIAPanelWidget_OnAwake_Statics
 	{
 #if WITH_METADATA
@@ -142,7 +180,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnAwake_Statics::Function_MetaDataParams[] = {
 		{ "Category", "IA" },
 		{ "Comment", "//\xe8\x93\x9d\xe5\x9b\xbe\xe9\x87\x8d\xe5\x86\x99\n" },
-		{ "DisplayName", "\xe7\x95\x8c\xe9\x9d\xa2\xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96" },
+		{ "DisplayName", "\xe5\xbd\x93\xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe7\x95\x8c\xe9\x9d\xa2\xe6\x97\xb6" },
 		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
 		{ "ToolTip", "\xe8\x93\x9d\xe5\x9b\xbe\xe9\x87\x8d\xe5\x86\x99" },
 	};
@@ -167,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnDestroy_Statics::Function_MetaDataParams[] = {
 		{ "Category", "IA" },
-		{ "DisplayName", "\xe9\x94\x80\xe6\xaf\x81\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "DisplayName", "\xe5\xbd\x93\xe9\x94\x80\xe6\xaf\x81\xe7\x95\x8c\xe9\x9d\xa2\xe6\x97\xb6" },
 		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
 	};
 #endif
@@ -191,7 +229,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnHide_Statics::Function_MetaDataParams[] = {
 		{ "Category", "IA" },
-		{ "DisplayName", "\xe9\x9a\x90\xe8\x97\x8f\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "DisplayName", "\xe5\xbd\x93\xe9\x9a\x90\xe8\x97\x8f\xe7\x95\x8c\xe9\x9d\xa2\xe6\x97\xb6" },
 		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
 	};
 #endif
@@ -215,7 +253,7 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UIAPanelWidget_OnShow_Statics::Function_MetaDataParams[] = {
 		{ "Category", "IA" },
-		{ "DisplayName", "\xe6\x98\xbe\xe7\xa4\xba\xe7\x95\x8c\xe9\x9d\xa2" },
+		{ "DisplayName", "\xe5\xbd\x93\xe6\x98\xbe\xe7\xa4\xba\xe7\x95\x8c\xe9\x9d\xa2\xe6\x97\xb6" },
 		{ "ModuleRelativePath", "Public/UI/Panel/IAPanelWidget.h" },
 	};
 #endif
@@ -256,10 +294,11 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UIAPanelWidget_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UIAPanelWidget_DisplayEnterMovie, "DisplayEnterMovie" }, // 3729723775
 		{ &Z_Construct_UFunction_UIAPanelWidget_DisplayLeaveMovie, "DisplayLeaveMovie" }, // 1919893412
-		{ &Z_Construct_UFunction_UIAPanelWidget_OnAwake, "OnAwake" }, // 4208683848
-		{ &Z_Construct_UFunction_UIAPanelWidget_OnDestroy, "OnDestroy" }, // 3937432149
-		{ &Z_Construct_UFunction_UIAPanelWidget_OnHide, "OnHide" }, // 3515874747
-		{ &Z_Construct_UFunction_UIAPanelWidget_OnShow, "OnShow" }, // 2942470224
+		{ &Z_Construct_UFunction_UIAPanelWidget_HideSelf, "HideSelf" }, // 664584494
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnAwake, "OnAwake" }, // 4097706192
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnDestroy, "OnDestroy" }, // 1165058929
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnHide, "OnHide" }, // 2162681629
+		{ &Z_Construct_UFunction_UIAPanelWidget_OnShow, "OnShow" }, // 3720933545
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIAPanelWidget_Statics::Class_MetaDataParams[] = {
@@ -311,15 +350,15 @@ void EmptyLinkFunctionForGeneratedCodeIAPanelWidget() {}
 	UIAPanelWidget::UIAPanelWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UIAPanelWidget);
 	UIAPanelWidget::~UIAPanelWidget() {}
-	struct Z_CompiledInDeferFile_FID_Project_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics
+	struct Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 3760666044U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UIAPanelWidget, UIAPanelWidget::StaticClass, TEXT("UIAPanelWidget"), &Z_Registration_Info_UClass_UIAPanelWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UIAPanelWidget), 3213080462U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_1490987771(TEXT("/Script/IAFramework"),
-		Z_CompiledInDeferFile_FID_Project_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_4104082675(TEXT("/Script/IAFramework"),
+		Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitProject_IAFramework_UE_MineGame_Plugins_IAFramework_Source_IAFramework_Public_UI_Panel_IAPanelWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -39,6 +39,11 @@ void UIAPanelWidget::Destroy()
 {
 }
 
+void UIAPanelWidget::HideSelf()
+{
+	UIACommon::Get()->GetUIModule()->HidePanel(PanelType);
+}
+
 #if WITH_EDITOR
 
 void UIAPanelWidget::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)

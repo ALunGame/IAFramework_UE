@@ -21,8 +21,6 @@ public:
 	UPROPERTY(EditAnywhere)
 	FUIProperty UIProperty;
 
-	
-
 public:
 
 	void InitData(EUIPanelType InPanelType);
@@ -37,17 +35,20 @@ public:
 	virtual void Hide();		//隐藏
 	virtual void Destroy();		//销毁
 
+	UFUNCTION(BlueprintCallable, Category="IA", meta=(DisplayName = "关闭自身"))
+	void HideSelf();
+
 	//蓝图重写
-	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "界面初始化"))
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "当初始化界面时"))
 	void OnAwake();  
 	
-	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "显示界面"))
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "当显示界面时"))
 	void OnShow(); 
 
-	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "隐藏界面"))
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "当隐藏界面时"))
 	void OnHide();  
 
-	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "销毁界面"))
+	UFUNCTION(BlueprintImplementableEvent, Category="IA", meta=(DisplayName = "当销毁界面时"))
 	void OnDestroy();  
 
 	//动画回调函数

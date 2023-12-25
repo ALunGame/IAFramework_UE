@@ -15,7 +15,9 @@ public class MineGame : ModuleRules
 			"Engine", 
 			"InputCore",
 			"IAFramework",
-			"UMG"
+			"UMG",
+			"AIModule",
+			"EnhancedInput",
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
